@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <!-- Menú Inicial de la Aplicación y Menú de Elección de Reglas-->
+    <style name="menuInicial">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>  
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="menuInicial.contenedorBotones">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    
+    <style name="menuInicial.boton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+<!--         <item name="android:layout_centerHorizontal">true</item> -->
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginRight">6sp</item>
+        <item name="android:background">@drawable/fondo_boton_inicio</item>
+    </style>
+    
+    <style name="encabezado">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:layout_marginBottom">6sp</item>
+    </style>
+    
+    <!-- Menú -->
+    <style name="menu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="menu.submenu">
+        <item name="android:layout_marginLeft">@dimen/tabulacion_menus</item>
+    </style>
+    <style name="menu.izquierdo">
+        <item name="android:layout_marginLeft">@dimen/padding_menu_izquierdo</item>
+        <item name="android:layout_marginRight">@dimen/padding_menu_izquierdo</item>
+    </style>
+    
+    <style name="titulo" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="titulo.h1">
+        <item name="android:layout_marginTop">@dimen/margen_menu_h1</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="titulo.h2">
+        <item name="android:layout_marginTop">@dimen/margen_menu_h2</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="titulo.h3">
+        <item name="android:layout_marginTop">@dimen/margen_menu_h3</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="titulo.h4">
+        <item name="android:layout_marginTop">@dimen/margen_menu_h4</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Separadores -->
+    <style name="separador">
+        <item name="android:layout_height">@dimen/anchura_separador</item>
+        <item name="android:layout_width">@dimen/anchura_separador</item>
+        <item name="android:background">@color/separador</item>
+    </style>
+    
+    <style name="separador.vertical">
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    
+</resources>

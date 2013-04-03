@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="separador">#000000</color>
+    <color name="rojo">#ff0018</color>
+    <color name="blanco">#ffffff</color>
+    <color name="negro">#000000</color>
+</resources>

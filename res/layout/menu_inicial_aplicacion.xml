@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuInicialAplicacion"
+    style="@style/menuInicial" > 
+    
+    <LinearLayout android:id="@+id/botonesInicio"
+   	    style="@style/menuInicial.contenedorBotones">
+   	    
+   	    <!-- Botones de Inicio -->
+	    <Button
+        android:id="@+id/botonNuevaPartida"
+        style="@style/menuInicial.boton"
+        android:text="@string/botonNuevaPartida" />
+
+    <Button
+        android:id="@+id/botonCargarPartida"
+        style="@style/menuInicial.boton"
+        android:text="@string/botonCargarPartida" />
+
+    <Button
+        android:id="@+id/botonTercero"
+        style="@style/menuInicial.boton"
+        android:text="@string/botonTercero" />
+       	
+   	</LinearLayout>
+
+</LinearLayout>

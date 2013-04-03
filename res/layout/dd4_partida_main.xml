@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+    <!-- Columna Izquierda -->
+	<fragment class="es.androidespixelados.gestorpartida.fragmento.FragmentoColumnaIzquierda"
+		android:id="@+id/FrgColIzq"
+		android:layout_weight="15"
+		android:layout_width="0px"
+		android:layout_height="match_parent" />
+	
+	<!-- Separador -->
+    <View style="@style/separador.vertical" />
+	
+    <!-- Contenido -->
+	<fragment class="es.androidespixelados.gestorpartida.fragmento.FragmentoContenidoDerecho"
+		android:id="@+id/FrgContDer"
+		android:layout_weight="85"
+		android:layout_width="0px"
+		android:layout_height="match_parent" />
+		
+</LinearLayout>

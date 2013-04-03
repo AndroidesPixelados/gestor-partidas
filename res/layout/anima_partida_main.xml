@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <!-- Menú izquierdo -->
+    <ScrollView android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <LinearLayout
+	        android:id="@+id/zonaMenu"
+	        style="@style/menu.izquierdo">
+	        
+	        <TextView android:id="@+id/nombrePartida" style="@style/titulo.h1" />
+	        <LinearLayout android:id="@+id/menuPartida" style="@style/menu.submenu">
+	            <!-- Plantillas -->
+		        <TextView android:text="@string/comun_partida_menu_partida_plantillas" style="@style/titulo.h2" />
+		        <LinearLayout android:id="@+id/menuPlantillas" style="@style/menu.submenu">
+		            <TextView android:text="@string/comun_partida_menu_partida_plantillas_clases" style="@style/titulo.h3"/>
+		            <TextView android:text="@string/comun_partida_menu_partida_plantillas_pjs" style="@style/titulo.h3"/>
+		            <TextView android:text="@string/comun_partida_menu_partida_plantillas_encuentros" style="@style/titulo.h3"/>
+		        </LinearLayout>
+		        
+		        <!-- Personajes -->
+		        <TextView android:text="@string/comun_partida_menu_partida_personajes" style="@style/titulo.h2" />
+		        <LinearLayout android:id="@+id/menuPersonajes" style="@style/menu.submenu">
+		            <TextView android:text="@string/comun_partida_menu_partida_personajes_pjs" style="@style/titulo.h3"/>
+		            <TextView android:text="@string/comun_partida_menu_partida_personajes_pnjs" style="@style/titulo.h3"/>
+		        </LinearLayout>
+		        
+		        <!-- Escenas -->
+		        <TextView android:text="@string/comun_partida_menu_partida_escenas" style="@style/titulo.h2" />
+		        <LinearLayout android:id="@+id/menuEscenas" style="@style/menu.submenu">
+		            <!-- Escenas > Encuentros -->
+		            <TextView android:text="@string/comun_partida_menu_partida_escenas_encuentros" style="@style/titulo.h3"/>
+		            <LinearLayout android:id="@+id/menuEscenasEncuentros" style="@style/menu.submenu">
+		                <TextView android:text="@string/comun_partida_menu_partida_escenas_encuentros_listado" style="@style/titulo.h4"/>
+		                <TextView android:text="@string/comun_partida_menu_partida_escenas_encuentros_freeform" style="@style/titulo.h4"/>
+		            </LinearLayout>
+		            
+		            <TextView android:text="@string/comun_partida_menu_partida_escenas_personajes" style="@style/titulo.h3"/>
+		            <TextView android:text="@string/comun_partida_menu_partida_escenas_imagenes" style="@style/titulo.h3"/>
+		            <TextView android:text="@string/comun_partida_menu_partida_escenas_musica" style="@style/titulo.h3"/>
+		            <TextView android:text="@string/comun_partida_menu_partida_escenas_tramas" style="@style/titulo.h3"/>
+		        </LinearLayout>
+		        
+		        <!-- Utilidades -->
+		        <TextView android:text="@string/comun_partida_menu_partida_utilidades" style="@style/titulo.h2" />
+		        <LinearLayout android:id="@+id/menuUtilidades" style="@style/menu.submenu">
+		            <TextView android:text="@string/comun_partida_menu_partida_utilidades_dados" style="@style/titulo.h3"/>
+		        </LinearLayout>
+	        </LinearLayout>
+	        
+	        <!-- Librería general -->
+	        <TextView android:text="@string/comun_menu_libreria" style="@style/titulo.h1"/>
+	        <LinearLayout android:id="@+id/menuLibreriaGeneral" style="@style/menu.submenu">
+	            <TextView android:text="@string/comun_menu_libreria_imagenes" style="@style/titulo.h2"/>
+	            <TextView android:text="@string/comun_menu_libreria_musica" style="@style/titulo.h2"/>
+	        </LinearLayout>
+	        
+	    </LinearLayout>
+    </ScrollView>
+    
+    <!-- Separador -->
+    <View style="@style/separador.vertical" />
+    
+
+    <!-- Contenido -->
+    <LinearLayout
+        android:id="@+id/zonaContenido"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        
+        <!-- Contenido a incluir en un fragmento -->
+
+    </LinearLayout>
+
+</LinearLayout>

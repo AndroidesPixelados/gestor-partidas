@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuEleccionReglas"
+    style="@style/menuInicial" >
+	
+    <!-- Encabezado -->
+
+    <TextView
+        android:id="@+id/encabezado"
+        style="@style/encabezado"
+        android:text="@string/encabezado" />
+    
+   	<LinearLayout android:id="@+id/botonesReglas"
+   	    style="@style/menuInicial.contenedorBotones">
+   	    
+   	    <!-- Botones de elección de reglas -->
+	    <Button
+	        android:id="@+id/botonAnima"  
+	        android:text="@string/botonAnima"
+	        style="@style/menuInicial.boton" />
+   	        
+	
+	    <Button
+	        android:id="@+id/botonDungeons4"
+	        android:text="@string/botonDungeons4"
+	        style="@style/menuInicial.boton" />
+	
+	    <Button
+	        android:id="@+id/botonVampiro"
+	        android:text="@string/botonVampiro"
+	        style="@style/menuInicial.boton" />
+       	
+   	</LinearLayout>
+
+</LinearLayout>

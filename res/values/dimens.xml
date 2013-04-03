@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Espaciado para el menú y los submenús -->
+    <dimen name="padding_menu_izquierdo">16dp</dimen>
+    <dimen name="margen_menu_h1">16dp</dimen>
+    <dimen name="margen_menu_h2">8dp</dimen>
+    <dimen name="margen_menu_h3">4dp</dimen>
+    <dimen name="margen_menu_h4">2dp</dimen>
+    <dimen name="tabulacion_menus">16dp</dimen>
+    
+
+    <!-- Separadores -->
+    <dimen name="anchura_separador">1dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

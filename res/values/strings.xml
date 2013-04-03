@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GestorPartida</string>
+
+    <!-- Menú Inicial de la Aplicación -->
+    <string name="botonNuevaPartida">Nueva Partida</string>
+    <string name="botonCargarPartida">Cargar Partida</string>
+    <string name="botonTercero">Tercer Botón</string>
+    <!-- Fin de Menú Inicial de la Aplicación -->
+
+
+    <!-- Menú Elección Sistema de Reglas -->
+    <string name="botonAnima">Ánima</string>
+    <string name="botonDungeons4">Dungeons and Dragons 4Ed</string>
+    <string name="botonVampiro">Vampiro</string>
+    <string name="encabezado">Elige el sistema de reglas</string>
+    <!-- Fin de Menú Elección Sistema de Reglas -->
+
+    <string name="comun_partida_menu_partida_plantillas">Plantillas</string>
+    <string name="comun_partida_menu_partida_plantillas_pjs">Personajes</string>
+    <string name="comun_partida_menu_partida_plantillas_clases">Clases</string>
+    <string name="comun_partida_menu_partida_plantillas_encuentros">Encuentros</string>
+    <string name="comun_partida_menu_partida_personajes">Personajes</string>
+    <string name="comun_partida_menu_partida_personajes_pjs">Jugadores</string>
+    <string name="comun_partida_menu_partida_personajes_pnjs">No jugadores</string>
+    <string name="comun_partida_menu_partida_escenas">Escenas</string>
+    <string name="comun_partida_menu_partida_escenas_encuentros">Encuentros</string>
+    <string name="comun_partida_menu_partida_escenas_encuentros_listado">Listado</string>
+    <string name="comun_partida_menu_partida_escenas_encuentros_freeform">Freeform</string>
+    <string name="comun_partida_menu_partida_escenas_personajes">Personajes</string>
+    <string name="comun_partida_menu_partida_escenas_imagenes">Imágenes</string>
+    <string name="comun_partida_menu_partida_escenas_musica">Música</string>
+    <string name="comun_partida_menu_partida_escenas_tramas">Tramas</string>
+    <string name="comun_partida_menu_partida_utilidades">Utilidades</string>
+    <string name="comun_partida_menu_partida_utilidades_dados">Dados</string>
+    <string name="comun_partida_menu_partida_imagenes">Imágenes</string>
+    <string name="comun_partida_menu_partida_musica">Música</string>
+    <string name="comun_menu_libreria">Librería general</string>
+    <string name="comun_menu_libreria_imagenes">Imágenes</string>
+    <string name="comun_menu_libreria_musica">Música</string>
+    <string name="title_activity_dd4_partida">DD4PartidaActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
