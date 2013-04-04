@@ -1,10 +1,5 @@
 package es.androidespixelados.gestorpartida.dd4.vista;
 
-import java.util.ArrayList;
-
-import es.androidespixelados.gestorpartida.R;
-import es.androidespixelados.gestorpartida.dd4.adaptador.PlantillaAdaptador;
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
@@ -12,6 +7,8 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.TextView;
+import es.androidespixelados.gestorpartida.R;
+import es.androidespixelados.gestorpartida.dd4.adaptador.PlantillaAdaptador;
 
 /**
  * Actividad de D&D 4Ed.
