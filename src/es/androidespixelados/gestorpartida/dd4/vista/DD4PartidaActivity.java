@@ -42,7 +42,6 @@ public class DD4PartidaActivity extends FragmentActivity {
 		/** Asigno el adaptador a la ExpandableListView **/
 		this.plantillas.setAdapter(new PlantillaAdaptador(this));
 		
-		
 		/** Listener sobre los diferentes botones de la ExpandableListView **/
 		this.plantillas.setOnChildClickListener(new OnChildClickListener() {
 			
