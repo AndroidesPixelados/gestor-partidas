@@ -31,7 +31,7 @@ public abstract class Modulo extends ModeloBase {
 	 * 
 	 * @return el mapa de atributos.
 	 */
-	final protected Map<EnumeracionAtributosBase, Object> getMapaAtributos() {
+	final protected Map<EnumeracionAtributosBase, Object> getMapaAtributosContenedor() {
 		return contenedor.getMapaAtributos();
 	}
 
@@ -46,7 +46,7 @@ public abstract class Modulo extends ModeloBase {
 	 */
 	final public void setContenedor(final TipoPersonaje contenedor) {
 		this.contenedor = contenedor;
-		this.establecerAtributos(getMapaAtributos());
+		this.establecerAtributos(getMapaAtributosContenedor());
 	}
 
 	/**
