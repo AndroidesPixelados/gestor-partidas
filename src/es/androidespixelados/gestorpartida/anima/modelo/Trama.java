@@ -1,5 +1,5 @@
 package es.androidespixelados.gestorpartida.anima.modelo;
 
-public class Trama {
+public class Trama extends ModeloBase {
 
 }

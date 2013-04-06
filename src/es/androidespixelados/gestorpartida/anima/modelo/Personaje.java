@@ -1,5 +1,5 @@
 package es.androidespixelados.gestorpartida.anima.modelo;
 
-public class Personaje {
+public class Personaje extends ModeloBase {
 
 }

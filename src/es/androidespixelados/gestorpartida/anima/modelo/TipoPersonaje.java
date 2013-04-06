@@ -24,11 +24,7 @@ import java.util.Map;
  * @author Loïc Prieto
  * 
  */
-public class TipoPersonaje {
-	/**
-	 * El nombre del módulo.
-	 */
-	private String									nombre;
+public class TipoPersonaje extends ModeloBase {
 
 	/**
 	 * El mapa de atributos que los módulos van a manipular.
@@ -71,26 +67,6 @@ public class TipoPersonaje {
 	}
 
 	/**
-	 * Obtiene el nombre.
-	 * 
-	 * @return nombre.
-	 */
-	public String getNombre() {
-		return nombre;
-	}
-
-	/**
-	 * Establece el nombre
-	 * 
-	 * @param nombre
-	 *            establece nombre a nombre
-	 * @return el objeto
-	 */
-	public void setNombre(final String nombre) {
-		this.nombre = nombre;
-	}
-
-	/**
 	 * Obtiene el mapaAtributos.
 	 * 
 	 * @return mapaAtributos.
@@ -108,42 +84,6 @@ public class TipoPersonaje {
 	 */
 	public void setMapaAtributos(final Map<EnumeracionAtributosBase, Object> mapaAtributos) {
 		this.mapaAtributos = mapaAtributos;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public int hashCode() {
-		final int PRIME = 31;
-		int result = 1;
-		result = (PRIME * result) + ((nombre == null) ? 0 : nombre.hashCode());
-		return result;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public boolean equals(final Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (!(obj instanceof TipoPersonaje)) {
-			return false;
-		}
-		final TipoPersonaje other = (TipoPersonaje) obj;
-		if (nombre == null) {
-			if (other.nombre != null) {
-				return false;
-			}
-		} else if (!nombre.equals(other.nombre)) {
-			return false;
-		}
-		return true;
 	}
 
 }

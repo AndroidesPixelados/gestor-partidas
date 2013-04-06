@@ -1,5 +1,5 @@
 package es.androidespixelados.gestorpartida.anima.modelo;
 
-public class Encuentro {
+public class Encuentro extends ModeloBase {
 
 }

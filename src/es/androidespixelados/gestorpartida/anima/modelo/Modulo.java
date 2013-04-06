@@ -19,17 +19,12 @@ import java.util.Map;
  * 
  * @author Loïc Prieto
  */
-public abstract class Modulo {
+public abstract class Modulo extends ModeloBase {
 
 	/**
 	 * El contenedor del módulo.
 	 */
 	private TipoPersonaje	contenedor;
-
-	/**
-	 * El nombre del módulo.
-	 */
-	private String			nombre;
 
 	/**
 	 * Obtiene el mapa de atributos del contenedor, para poder ser manipulado por el módulo.
@@ -62,41 +57,5 @@ public abstract class Modulo {
 	 *            el mapa de atributos del contenedor.
 	 */
 	protected abstract void establecerAtributos(final Map<EnumeracionAtributosBase, Object> mapaAtributos);
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public int hashCode() {
-		final int PRIME = 31;
-		int result = 1;
-		result = (PRIME * result) + ((nombre == null) ? 0 : nombre.hashCode());
-		return result;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public boolean equals(final Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (!(obj instanceof Modulo)) {
-			return false;
-		}
-		final Modulo other = (Modulo) obj;
-		if (nombre == null) {
-			if (other.nombre != null) {
-				return false;
-			}
-		} else if (!nombre.equals(other.nombre)) {
-			return false;
-		}
-		return true;
-	}
 
 }
