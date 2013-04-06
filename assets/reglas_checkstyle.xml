@@ -114,9 +114,6 @@ Reglas de checkstyle para Androides Pixelados
     <module name="ExplicitInitialization">
       <property name="severity" value="warning"/>
     </module>
-    <module name="FinalLocalVariable">
-      <property name="severity" value="warning"/>
-    </module>
     <module name="IllegalCatch">
       <property name="severity" value="warning"/>
     </module>
@@ -184,6 +181,6 @@ Reglas de checkstyle para Androides Pixelados
   </module>
   <module name="StrictDuplicateCode">
     <property name="severity" value="warning"/>
-    <property name="min" value="8"/>
+    <property name="min" value="20"/>
   </module>
 </module>
