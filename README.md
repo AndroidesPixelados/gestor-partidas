@@ -1,4 +1,4 @@
-Gestor de partidas roleras
+**Gestor de partidas roleras**
 
 Aplicación para tablets Android para ayudar al Director de Juego a la ejecución de una partida de rol. 
 Contiene herramientas para organizar la partida en escenas, crear personajes, generar encuentros, guardar
