@@ -1,5 +1,5 @@
 package es.androidespixelados.gestorpartida.anima.modelo;
 
-public class Imagen extends ModeloBase {
+public class Imagen extends RecursoMultimedia {
 
 }
