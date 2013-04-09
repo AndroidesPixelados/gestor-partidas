@@ -19,5 +19,3 @@ las "Issues". Si tenemos tiempo, nos pondremos a ello. Aún mejor, si podeis imp
 añadirlas al código principal.
 
 Saludos!
-
-Resubida al repositorio
