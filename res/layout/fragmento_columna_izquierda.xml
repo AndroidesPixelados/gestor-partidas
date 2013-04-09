@@ -3,17 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-	
-    <!-- Menú izquierdo -->
-    <ScrollView android:layout_width="wrap_content" android:layout_height="fill_parent">
-        <LinearLayout
-	        android:id="@+id/zonaMenu"
-	        style="@style/menu.izquierdo">
 	        
-	        <TextView android:id="@+id/nombrePartida" style="@style/titulo.h1" />
+	    <TextView android:id="@+id/nombrePartida" style="@style/titulo.h1" />
 	        
-	        
-	    </LinearLayout>
-    </ScrollView>
+        <ExpandableListView 
+			android:id="@+id/plantillas" 
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent" />
+ 			        
 
 </LinearLayout>

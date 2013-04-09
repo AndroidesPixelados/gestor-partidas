@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fileset-config file-format-version="1.2.0" simple-config="false" sync-formatter="false">
+  <local-check-config name="reglas_checkstyle" location="internal_config__1365196717942.xml" type="internal" description="Reglas de checkstyle para Androides Pixelados"/>
+  <fileset name="Código java" enabled="true" check-config-name="reglas_checkstyle" local="true">
+    <file-match-pattern match-pattern=".*\.java$" include-pattern="true"/>
+    <file-match-pattern match-pattern="gen\/.*\.java" include-pattern="false"/>
+  </fileset>
+</fileset-config>
