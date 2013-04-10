@@ -12,53 +12,53 @@ import java.util.*;
 public class Personaje {
 	
 	/**
-	 * @ID
+	 * ID
 	 */
 	private Long id;
 	
 	/**
-	 * @nombre
+	 * nombre
 	 */
 	
 	private String nombre;
 	
 	/**
-	 * @nivel
+	 * nivel
 	 */
 	private int nivel;
 	
 	/**
-	 * @Puntos de vida
+	 * Puntos de vida
 	 */
 	private int puntosVida;
 	
 	/**
-	 * @Estado de bloodied
+	 * Estado de bloodied
 	 */
 	private boolean bloodied;
 	
 	/**
-	 * @AC (clase de armadura)
+	 * AC (clase de armadura)
 	 */
 	private int ac;
 	
 	/**
-	 * @Iniciativa
+	 * Iniciativa
 	 */
 	private int iniciativa;
 	
 	/**
-	 * @Ruta donde se encuentra almacenado el archivo
+	 * Ruta donde se encuentra almacenado el archivo
 	 */
 	private String ruta;
 	
 	/**
-	 * @Resistencias (Fortaleza, Reflejos y Voluntad)
+	 * Resistencias (Fortaleza, Reflejos y Voluntad)
 	 */
 	private Map<String, Object> resistencias;
 	
 	/**
-	 * @Lista de efectos sufridos en combate
+	 * Lista de efectos sufridos en combate
 	 */
 	private List<EfectoCombate> efectosSufridosEnCombate;
 

@@ -8,7 +8,7 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
 public class Jugador extends Personaje {
 	
 	/**
-	 * @Clase de personaje
+	 * Clase de personaje
 	 */
 	private ClasePersonaje clase;
 

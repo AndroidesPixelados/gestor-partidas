@@ -12,12 +12,12 @@ public class Monstruo extends Personaje {
 	
 	
 	/**
-	 * @Rol principal de la criatura (artillería, controlador...etc)
+	 * Rol principal de la criatura (artillería, controlador...etc)
 	 */
 	private Rol rol;
 	
 	/**
-	 * @estaMuerto booleano que marca si un monstruo está muerto o no
+	 * estaMuerto booleano que marca si un monstruo está muerto o no
 	 */
 	private boolean estaMuerto;
 

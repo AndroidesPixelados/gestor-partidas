@@ -10,22 +10,22 @@ import java.util.List;
 public class Encuentro {
 	
 	/**
-	 * @ID
+	 * ID
 	 */
 	private Long id;
 	
 	/**
-	 * @Nombre
+	 * Nombre
 	 */
 	private String nombre;
 	
 	/**
-	 * @Descripción
+	 * Descripción
 	 */
 	private String descripcion;
 	
 	/**
-	 * @Lista de enemigos
+	 * Lista de enemigos
 	 */
 	private List<Personaje> listaEnemigos;
 	

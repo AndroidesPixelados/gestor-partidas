@@ -8,20 +8,20 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
  * @author Javi Montes
  *
  */
-public class ArchivoSonido {
+public class Sonido {
 	
 	/**
-	 * @ID
+	 * ID
 	 */
 	private Long id;
 	
 	/**
-	 * @Nombre del archivo
+	 * Nombre del archivo
 	 */
 	private String nombre;
 	
 	/**
-	 * @Ruta donde se encuentra almacenado
+	 * Ruta donde se encuentra almacenado
 	 */
 	private String ruta;
 
@@ -75,7 +75,6 @@ public class ArchivoSonido {
 	public void setRuta(String ruta) {
 		this.ruta = ruta;
 	}
-	
 	
 
 }

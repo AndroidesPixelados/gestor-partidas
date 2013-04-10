@@ -17,33 +17,28 @@ import java.util.List;
 public class Escena {
 	
 	/**
-	 * @ID de la escena
+	 * ID de la escena
 	 */
 	private Long id;
 	
 	/**
-	 * @Nombre de la escena
+	 * Nombre de la escena
 	 */
 	private String nombre;
 	
 	/**
-	 * @Descripción de la escena
+	 * Descripción de la escena
 	 */
 	private String descripcion;
 	
-	/**
-	 * @Ruta donde se encuentra almacenada
-	 */
-	private String ruta;
-	
 	
 	/**
-	 * @Lista de encuentros que incluye la escena
+	 * Lista de encuentros que incluye la escena
 	 */
 	private List<Encuentro> listaEncuentrosEscena;
 	
 	/**
-	 * @Lista de personajes que incluye la escena
+	 * Lista de personajes que incluye la escena
 	 */
 	private List<Personaje> listaPersonajesEscena;
 
@@ -96,23 +91,6 @@ public class Escena {
 	 */
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
-	}
-
-	/**
-	 * Obtiene el ruta.
-	 * @return ruta.
-	 */
-	public String getRuta() {
-		return ruta;
-	}
-
-	/**
-	 * Establece el  ruta
-	 * @param ruta establece ruta a ruta
-	 * @return el objeto
-	 */
-	public void setRuta(String ruta) {
-		this.ruta = ruta;
 	}
 
 	/**

@@ -11,12 +11,12 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
 public class ClasePersonaje {
 	
 	/**
-	 * @ID
+	 * ID
 	 */
 	private Long id;
 	
 	/**
-	 * @Nombre
+	 * Nombre
 	 */
 	private String nombre;
 

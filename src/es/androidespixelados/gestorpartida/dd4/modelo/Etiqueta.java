@@ -10,12 +10,12 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
 public class Etiqueta {
 	
 	/**
-	 * @ID
+	 * ID
 	 */
 	private Long id;
 	
 	/**
-	 * @nombre
+	 * nombre
 	 */
 	private String nombre;
 

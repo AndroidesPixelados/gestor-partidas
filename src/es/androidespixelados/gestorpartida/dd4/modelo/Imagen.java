@@ -13,24 +13,19 @@ import java.util.List;
 public class Imagen {
 	
 	/**
-	 * @ID
+	 * ID
 	 */
 	private Long id;
 	
 	/**
-	 * @Nombre de la imagen
+	 * Nombre de la imagen
 	 */
 	private String nombre;
 	
 	/**
-	 * Ruta de la imagen
+	 * Ruta donde se encuentra almacenada la imagen
 	 */
 	private String ruta;
-	
-	/**
-	 * @Lista de etiquetas (tags)
-	 */
-	private List<Etiqueta> listaEtiquetas;
 
 	/**
 	 * Obtiene el id.
@@ -83,22 +78,7 @@ public class Imagen {
 		this.ruta = ruta;
 	}
 
-	/**
-	 * Obtiene el listaEtiquetas.
-	 * @return listaEtiquetas.
-	 */
-	public List<Etiqueta> getListaEtiquetas() {
-		return listaEtiquetas;
-	}
 
-	/**
-	 * Establece el  listaEtiquetas
-	 * @param listaEtiquetas establece listaEtiquetas a listaEtiquetas
-	 * @return el objeto
-	 */
-	public void setListaEtiquetas(List<Etiqueta> listaEtiquetas) {
-		this.listaEtiquetas = listaEtiquetas;
-	}
 	
 
 }

@@ -12,22 +12,17 @@ import java.util.List;
 public class Partida {
 	
 	/**
-	 * @ID
+	 * ID
 	 */
 	private Long id;
 	
 	/**
-	 * @Nombre
+	 * Nombre
 	 */
 	private String nombre;
 	
 	/**
-	 * @Ruta
-	 */
-	private String ruta;
-	
-	/**
-	 * @Lista de escenas
+	 * Lista de escenas
 	 */
 	private List<Escena> listaEscenas;
 
@@ -63,23 +58,6 @@ public class Partida {
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	/**
-	 * Obtiene el ruta.
-	 * @return ruta.
-	 */
-	public String getRuta() {
-		return ruta;
-	}
-
-	/**
-	 * Establece el  ruta
-	 * @param ruta establece ruta a ruta
-	 * @return el objeto
-	 */
-	public void setRuta(String ruta) {
-		this.ruta = ruta;
 	}
 
 	/**

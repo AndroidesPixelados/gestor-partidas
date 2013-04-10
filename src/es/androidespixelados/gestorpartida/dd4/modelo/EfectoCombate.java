@@ -12,18 +12,23 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
 public class EfectoCombate {
 	
 	/**
-	 * @ID
+	 * ID
 	 */
 	private Long id;
 	
 	/**
-	 * @Nombre del efecto
+	 * Nombre del efecto
 	 */
 	private String nombre;
+	
+	/**
+	 * Descripción del efecto
+	 */
+	private String descripción;
 
 	/**
 	 * Obtiene el id.
-	 * @return id.
+	 * return id.
 	 */
 	public Long getId() {
 		return id;
@@ -53,6 +58,23 @@ public class EfectoCombate {
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	/**
+	 * Obtiene el descripción.
+	 * @return descripción.
+	 */
+	public String getDescripción() {
+		return descripción;
+	}
+
+	/**
+	 * Establece el  descripción
+	 * @param descripción establece descripción a descripción
+	 * @return el objeto
+	 */
+	public void setDescripción(String descripción) {
+		this.descripción = descripción;
 	}
 
 }
