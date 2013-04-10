@@ -1,14 +1,14 @@
 package es.androidespixelados.gestorpartida.dd4.modelo;
 
 /**
- *
- * Clase descriptora de los diferentes tipos de personaje: guerrero, paladín,
- * pícaro...etc.
+ * Clase descriptora de los archivos de sonido (MP3) que se utilizarán,
+ * posteriormente, en la librería tanto general como particular de cada
+ * escena
  * 
  * @author Javi Montes
  *
  */
-public class ClasePersonaje {
+public class ArchivoSonido {
 	
 	/**
 	 * @ID
@@ -16,9 +16,14 @@ public class ClasePersonaje {
 	private Long id;
 	
 	/**
-	 * @Nombre
+	 * @Nombre del archivo
 	 */
 	private String nombre;
+	
+	/**
+	 * @Ruta donde se encuentra almacenado
+	 */
+	private String ruta;
 
 	/**
 	 * Obtiene el id.
@@ -53,5 +58,24 @@ public class ClasePersonaje {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
+	/**
+	 * Obtiene el ruta.
+	 * @return ruta.
+	 */
+	public String getRuta() {
+		return ruta;
+	}
+
+	/**
+	 * Establece el  ruta
+	 * @param ruta establece ruta a ruta
+	 * @return el objeto
+	 */
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
+	}
+	
+	
 
 }

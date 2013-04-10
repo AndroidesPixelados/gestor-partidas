@@ -1,14 +1,15 @@
 package es.androidespixelados.gestorpartida.dd4.modelo;
 
 /**
- *
- * Clase descriptora de los diferentes tipos de personaje: guerrero, paladín,
- * pícaro...etc.
+ * Durante el combate, cualquier actor puede sufrir diferentes efectos cuyas consecuencias
+ * se dejan notar durante uno o varios asaltos. Por ejemplo, cegado, sordo, atontado...etc.
+ * Esta clase describe tales efectos y permitirá mostrarlos en la vista mediante el icono
+ * correspondiente, de manera que puedan ser vistos rápidamente por el director de juego.
  * 
  * @author Javi Montes
  *
  */
-public class ClasePersonaje {
+public class EfectoCombate {
 	
 	/**
 	 * @ID
@@ -16,7 +17,7 @@ public class ClasePersonaje {
 	private Long id;
 	
 	/**
-	 * @Nombre
+	 * @Nombre del efecto
 	 */
 	private String nombre;
 

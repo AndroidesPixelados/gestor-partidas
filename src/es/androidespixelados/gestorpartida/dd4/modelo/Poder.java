@@ -1,5 +1,9 @@
 package es.androidespixelados.gestorpartida.dd4.modelo;
 
-public class NoJugador extends Personaje {
+/**
+ * @author Javi Montes
+ *
+ */
+public class Poder {
 
 }
