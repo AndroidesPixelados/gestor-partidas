@@ -8,6 +8,7 @@
     Checkstyle-Configuration: reglas_checkstyle
     Description: 
 Reglas de checkstyle para Androides Pixelados
+
 -->
 <module name="Checker">
   <property name="severity" value="warning"/>
@@ -31,6 +32,7 @@ Reglas de checkstyle para Androides Pixelados
     </module>
     <module name="JavadocVariable">
       <property name="severity" value="warning"/>
+      <property name="scope" value="protected"/>
     </module>
     <module name="ClassTypeParameterName">
       <property name="severity" value="warning"/>
@@ -179,8 +181,5 @@ Reglas de checkstyle para Androides Pixelados
       <property name="severity" value="warning"/>
     </module>
   </module>
-  <module name="StrictDuplicateCode">
-    <property name="severity" value="warning"/>
-    <property name="min" value="20"/>
-  </module>
 </module>
+

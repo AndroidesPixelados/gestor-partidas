@@ -1,5 +1,5 @@
 package es.androidespixelados.gestorpartida.anima.modelo;
 
-public class Musica {
+public class Musica extends ModeloBase {
 
 }
