@@ -3,6 +3,9 @@ package es.androidespixelados.gestorpartida.anima.modelo;
 import java.util.List;
 import java.util.Map;
 
+import es.androidespixelados.gestorpartida.modelo.Trama;
+
+
 public class Personaje extends ModeloBase {
 
 	/**
