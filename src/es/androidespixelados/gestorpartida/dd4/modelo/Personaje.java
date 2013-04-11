@@ -2,6 +2,8 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
 
 import java.util.*;
 
+import es.androidespixelados.gestorpartida.modelo.EfectoCombate;
+
 /**
  * Esta clase engloba la descripción de actores jugadores y no-jugadores. Además, sirve de clase padre
  * para Monstruo, la cual hereda todos sus atributos. 

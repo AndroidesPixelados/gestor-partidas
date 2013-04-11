@@ -1,5 +1,7 @@
 package es.androidespixelados.gestorpartida.dd4.modelo;
 
+import es.androidespixelados.gestorpartida.modelo.ClasePersonaje;
+
 /**
  * 
  * @author Javi Montes
