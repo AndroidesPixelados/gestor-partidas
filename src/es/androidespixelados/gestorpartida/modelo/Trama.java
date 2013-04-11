@@ -1,4 +1,7 @@
-package es.androidespixelados.gestorpartida.anima.modelo;
+package es.androidespixelados.gestorpartida.modelo;
+
+import es.androidespixelados.gestorpartida.anima.modelo.ModeloBase;
+
 
 /**
  * Un texto narrativo para asociado a una partida, una escena, un encuentro o un personaje.

@@ -1,13 +1,14 @@
-package es.androidespixelados.gestorpartida.dd4.modelo;
+package es.androidespixelados.gestorpartida.modelo;
 
 /**
- * 
- * Clase descriptora de las etiquetas (tags) aplicables a los distintos archivos de sonido e imagen.
+ * Clase descriptora de los archivos de sonido (MP3) que se utilizarán,
+ * posteriormente, en la librería tanto general como particular de cada
+ * escena
  * 
  * @author Javi Montes
  *
  */
-public class Etiqueta {
+public class Sonido {
 	
 	/**
 	 * ID
@@ -15,9 +16,14 @@ public class Etiqueta {
 	private Long id;
 	
 	/**
-	 * nombre
+	 * Nombre del archivo
 	 */
 	private String nombre;
+	
+	/**
+	 * Ruta donde se encuentra almacenado
+	 */
+	private String ruta;
 
 	/**
 	 * Obtiene el id.
@@ -53,5 +59,22 @@ public class Etiqueta {
 		this.nombre = nombre;
 	}
 
+	/**
+	 * Obtiene el ruta.
+	 * @return ruta.
+	 */
+	public String getRuta() {
+		return ruta;
+	}
+
+	/**
+	 * Establece el  ruta
+	 * @param ruta establece ruta a ruta
+	 * @return el objeto
+	 */
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
+	}
+	
 
 }

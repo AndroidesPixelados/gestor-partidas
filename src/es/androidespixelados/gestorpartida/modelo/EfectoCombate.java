@@ -1,4 +1,4 @@
-package es.androidespixelados.gestorpartida.dd4.modelo;
+package es.androidespixelados.gestorpartida.modelo;
 
 /**
  * Durante el combate, cualquier actor puede sufrir diferentes efectos cuyas consecuencias

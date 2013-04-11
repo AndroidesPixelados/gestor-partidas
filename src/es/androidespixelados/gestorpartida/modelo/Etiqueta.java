@@ -1,14 +1,13 @@
-package es.androidespixelados.gestorpartida.dd4.modelo;
+package es.androidespixelados.gestorpartida.modelo;
 
 /**
- *
- * Clase descriptora de los diferentes tipos de personaje: guerrero, paladín,
- * pícaro...etc.
+ * 
+ * Clase descriptora de las etiquetas (tags) aplicables a los distintos archivos de sonido e imagen.
  * 
  * @author Javi Montes
  *
  */
-public class ClasePersonaje {
+public class Etiqueta {
 	
 	/**
 	 * ID
@@ -16,7 +15,7 @@ public class ClasePersonaje {
 	private Long id;
 	
 	/**
-	 * Nombre
+	 * nombre
 	 */
 	private String nombre;
 
@@ -53,5 +52,6 @@ public class ClasePersonaje {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 
 }

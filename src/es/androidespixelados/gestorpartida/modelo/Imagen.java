@@ -1,4 +1,4 @@
-package es.androidespixelados.gestorpartida.dd4.modelo;
+package es.androidespixelados.gestorpartida.modelo;
 
 import java.util.List;
 
