@@ -1,71 +1,73 @@
 package es.androidespixelados.gestorpartida.dd4.modelo;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
 import es.androidespixelados.gestorpartida.modelo.EfectoCombate;
 
 /**
  * Esta clase engloba la descripción de actores jugadores y no-jugadores. Además, sirve de clase padre
- * para Monstruo, la cual hereda todos sus atributos. 
+ * para Monstruo, la cual hereda todos sus atributos.
  * 
  * @author Javi Montes
- *
+ * 
  */
 public class Personaje {
-	
+
 	/**
 	 * ID
 	 */
-	private Long id;
-	
+	private Long				id;
+
 	/**
 	 * nombre
 	 */
-	
-	private String nombre;
-	
+
+	private String				nombre;
+
 	/**
 	 * nivel
 	 */
-	private int nivel;
-	
+	private int					nivel;
+
 	/**
 	 * Puntos de vida
 	 */
-	private int puntosVida;
-	
+	private int					puntosVida;
+
 	/**
 	 * Estado de bloodied
 	 */
-	private boolean bloodied;
-	
+	private boolean				bloodied;
+
 	/**
 	 * AC (clase de armadura)
 	 */
-	private int ac;
-	
+	private int					ac;
+
 	/**
 	 * Iniciativa
 	 */
-	private int iniciativa;
-	
+	private int					iniciativa;
+
 	/**
 	 * Ruta donde se encuentra almacenado el archivo
 	 */
-	private String ruta;
-	
+	private String				ruta;
+
 	/**
 	 * Resistencias (Fortaleza, Reflejos y Voluntad)
 	 */
-	private Map<String, Object> resistencias;
-	
+	private Map<String, Object>	resistencias;
+
 	/**
 	 * Lista de efectos sufridos en combate
 	 */
-	private List<EfectoCombate> efectosSufridosEnCombate;
+	private List<EfectoCombate>	efectosSufridosEnCombate;
 
 	/**
 	 * Obtiene el id.
+	 * 
 	 * @return id.
 	 */
 	public Long getId() {
@@ -73,8 +75,10 @@ public class Personaje {
 	}
 
 	/**
-	 * Establece el  id
-	 * @param id establece id a id
+	 * Establece el id
+	 * 
+	 * @param id
+	 *            establece id a id
 	 * @return el objeto
 	 */
 	public void setId(Long id) {
@@ -83,6 +87,7 @@ public class Personaje {
 
 	/**
 	 * Obtiene el nombre.
+	 * 
 	 * @return nombre.
 	 */
 	public String getNombre() {
@@ -90,8 +95,10 @@ public class Personaje {
 	}
 
 	/**
-	 * Establece el  nombre
-	 * @param nombre establece nombre a nombre
+	 * Establece el nombre
+	 * 
+	 * @param nombre
+	 *            establece nombre a nombre
 	 * @return el objeto
 	 */
 	public void setNombre(String nombre) {
@@ -100,6 +107,7 @@ public class Personaje {
 
 	/**
 	 * Obtiene el nivel.
+	 * 
 	 * @return nivel.
 	 */
 	public int getNivel() {
@@ -107,8 +115,10 @@ public class Personaje {
 	}
 
 	/**
-	 * Establece el  nivel
-	 * @param nivel establece nivel a nivel
+	 * Establece el nivel
+	 * 
+	 * @param nivel
+	 *            establece nivel a nivel
 	 * @return el objeto
 	 */
 	public void setNivel(int nivel) {
@@ -117,6 +127,7 @@ public class Personaje {
 
 	/**
 	 * Obtiene el puntosVida.
+	 * 
 	 * @return puntosVida.
 	 */
 	public int getPuntosVida() {
@@ -124,8 +135,10 @@ public class Personaje {
 	}
 
 	/**
-	 * Establece el  puntosVida
-	 * @param puntosVida establece puntosVida a puntosVida
+	 * Establece el puntosVida
+	 * 
+	 * @param puntosVida
+	 *            establece puntosVida a puntosVida
 	 * @return el objeto
 	 */
 	public void setPuntosVida(int puntosVida) {
@@ -134,6 +147,7 @@ public class Personaje {
 
 	/**
 	 * Obtiene el bloodied.
+	 * 
 	 * @return bloodied.
 	 */
 	public boolean isBloodied() {
@@ -141,8 +155,10 @@ public class Personaje {
 	}
 
 	/**
-	 * Establece el  bloodied
-	 * @param bloodied establece bloodied a bloodied
+	 * Establece el bloodied
+	 * 
+	 * @param bloodied
+	 *            establece bloodied a bloodied
 	 * @return el objeto
 	 */
 	public void setBloodied(boolean bloodied) {
@@ -151,6 +167,7 @@ public class Personaje {
 
 	/**
 	 * Obtiene el ac.
+	 * 
 	 * @return ac.
 	 */
 	public int getAc() {
@@ -158,8 +175,10 @@ public class Personaje {
 	}
 
 	/**
-	 * Establece el  ac
-	 * @param ac establece ac a ac
+	 * Establece el ac
+	 * 
+	 * @param ac
+	 *            establece ac a ac
 	 * @return el objeto
 	 */
 	public void setAc(int ac) {
@@ -168,6 +187,7 @@ public class Personaje {
 
 	/**
 	 * Obtiene el iniciativa.
+	 * 
 	 * @return iniciativa.
 	 */
 	public int getIniciativa() {
@@ -175,8 +195,10 @@ public class Personaje {
 	}
 
 	/**
-	 * Establece el  iniciativa
-	 * @param iniciativa establece iniciativa a iniciativa
+	 * Establece el iniciativa
+	 * 
+	 * @param iniciativa
+	 *            establece iniciativa a iniciativa
 	 * @return el objeto
 	 */
 	public void setIniciativa(int iniciativa) {
@@ -185,6 +207,7 @@ public class Personaje {
 
 	/**
 	 * Obtiene el ruta.
+	 * 
 	 * @return ruta.
 	 */
 	public String getRuta() {
@@ -192,8 +215,10 @@ public class Personaje {
 	}
 
 	/**
-	 * Establece el  ruta
-	 * @param ruta establece ruta a ruta
+	 * Establece el ruta
+	 * 
+	 * @param ruta
+	 *            establece ruta a ruta
 	 * @return el objeto
 	 */
 	public void setRuta(String ruta) {
@@ -202,6 +227,7 @@ public class Personaje {
 
 	/**
 	 * Obtiene el resistencias.
+	 * 
 	 * @return resistencias.
 	 */
 	public Map<String, Object> getResistencias() {
@@ -209,8 +235,10 @@ public class Personaje {
 	}
 
 	/**
-	 * Establece el  resistencias
-	 * @param resistencias establece resistencias a resistencias
+	 * Establece el resistencias
+	 * 
+	 * @param resistencias
+	 *            establece resistencias a resistencias
 	 * @return el objeto
 	 */
 	public void setResistencias(Map<String, Object> resistencias) {
@@ -219,6 +247,7 @@ public class Personaje {
 
 	/**
 	 * Obtiene el efectosSufridosEnCombate.
+	 * 
 	 * @return efectosSufridosEnCombate.
 	 */
 	public List<EfectoCombate> getEfectosSufridosEnCombate() {
@@ -226,14 +255,14 @@ public class Personaje {
 	}
 
 	/**
-	 * Establece el  efectosSufridosEnCombate
-	 * @param efectosSufridosEnCombate establece efectosSufridosEnCombate a efectosSufridosEnCombate
+	 * Establece el efectosSufridosEnCombate
+	 * 
+	 * @param efectosSufridosEnCombate
+	 *            establece efectosSufridosEnCombate a efectosSufridosEnCombate
 	 * @return el objeto
 	 */
 	public void setEfectosSufridosEnCombate(List<EfectoCombate> efectosSufridosEnCombate) {
 		this.efectosSufridosEnCombate = efectosSufridosEnCombate;
 	}
-	
-	
 
 }
