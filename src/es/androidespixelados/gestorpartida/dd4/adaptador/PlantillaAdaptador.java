@@ -15,23 +15,31 @@ public class PlantillaAdaptador extends BaseExpandableListAdapter {
 	
 	private Context context;
 	
-	private final int paddingSuperior = 10;
-	private final int paddingInferior = 10;
-	private final int paddingDerecho = 30;
-	private final int paddingIzquierdo = 0;
+	/** Padding de componente hijo **/
+	private final int paddingSuperiorHijo = 10;
+	private final int paddingInferiorHijo = 10;
+	private final int paddingDerechoHijo = 30;
+	private final int paddingIzquierdoHijo = 0;
 	
+	/** Padding de componente padre **/
+	private final int paddingSuperiorPadre = 0;
+	private final int paddingInferiorPadre = 0;
+	private final int paddingDerechoPadre = 25;
+	private final int paddingIzquierdoPadre = 0;
+	
+	/** Padding de texto **/
 	private final int tamañoTextoChild = 16;
 	private final int tamañoTextoGroup = 18;
 		
 	/** Elementos que componen la ExpandableListView **/
-	private String nombreGrupo[] = {"Plantillas", "Personajes", "Escenas", "Utilidades", "Librer�a General"};
+	private String nombreGrupo[] = {"Plantillas", "Personajes", "Escenas", "Utilidades", "Librería General"};
 	private String nombreHijo[][] = {
 			
 			{"Personajes", "Clases", "Encuentros"},
 			{"Jugadores", "No Jugadores"},
-			{"Encuentros", "Personajes", "Im�genes", "M�sica", "Tramas"},
+			{"Encuentros", "Personajes", "Imágenes", "Música", "Tramas"},
 			{"Dados"},
-			{"Im�genes", "M�sica"}
+			{"Imágenes", "Música"}
 	
 	};
 
@@ -61,7 +69,7 @@ public class PlantillaAdaptador extends BaseExpandableListAdapter {
 		TextView tv = new TextView(context);
 		
 		tv.setText(nombreHijo[groupPosition][childPosition]);
-		tv.setPadding(paddingDerecho, paddingSuperior, paddingIzquierdo, paddingInferior);
+		tv.setPadding(paddingDerechoHijo, paddingSuperiorHijo, paddingIzquierdoHijo, paddingInferiorHijo);
 		tv.setTextSize(tamañoTextoChild);
 		
 		return tv;
@@ -96,7 +104,7 @@ public class PlantillaAdaptador extends BaseExpandableListAdapter {
 		TextView tv = new TextView(context);
 		
 		tv.setText(nombreGrupo[groupPosition]);
-		tv.setPadding(25, 0, 0, 0);
+		tv.setPadding(paddingDerechoPadre, paddingSuperiorPadre, paddingIzquierdoPadre, paddingInferiorPadre);
 		tv.setTextSize(tamañoTextoGroup);
 		
 		return tv;
