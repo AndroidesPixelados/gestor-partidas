@@ -15,15 +15,23 @@ public class PlantillaAdaptador extends BaseExpandableListAdapter {
 	
 	private Context context;
 	
+	private final int paddingSuperior = 10;
+	private final int paddingInferior = 10;
+	private final int paddingDerecho = 30;
+	private final int paddingIzquierdo = 0;
+	
+	private final int tamaÃ±oTextoChild = 16;
+	private final int tamaÃ±oTextoGroup = 18;
+		
 	/** Elementos que componen la ExpandableListView **/
-	private String nombreGrupo[] = {"Plantillas", "Personajes", "Escenas", "Utilidades", "Librería General"};
+	private String nombreGrupo[] = {"Plantillas", "Personajes", "Escenas", "Utilidades", "Librerï¿½a General"};
 	private String nombreHijo[][] = {
 			
 			{"Personajes", "Clases", "Encuentros"},
 			{"Jugadores", "No Jugadores"},
-			{"Encuentros", "Personajes", "Imágenes", "Música", "Tramas"},
+			{"Encuentros", "Personajes", "Imï¿½genes", "Mï¿½sica", "Tramas"},
 			{"Dados"},
-			{"Imágenes", "Música"}
+			{"Imï¿½genes", "Mï¿½sica"}
 	
 	};
 
@@ -53,8 +61,8 @@ public class PlantillaAdaptador extends BaseExpandableListAdapter {
 		TextView tv = new TextView(context);
 		
 		tv.setText(nombreHijo[groupPosition][childPosition]);
-		tv.setPadding(30, 10, 0, 10);
-		tv.setTextSize(16);
+		tv.setPadding(paddingDerecho, paddingSuperior, paddingIzquierdo, paddingInferior);
+		tv.setTextSize(tamaÃ±oTextoChild);
 		
 		return tv;
 	}
@@ -89,7 +97,7 @@ public class PlantillaAdaptador extends BaseExpandableListAdapter {
 		
 		tv.setText(nombreGrupo[groupPosition]);
 		tv.setPadding(25, 0, 0, 0);
-		tv.setTextSize(18);
+		tv.setTextSize(tamaÃ±oTextoGroup);
 		
 		return tv;
 	}
