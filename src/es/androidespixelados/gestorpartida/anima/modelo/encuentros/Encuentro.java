@@ -3,8 +3,8 @@ package es.androidespixelados.gestorpartida.anima.modelo.encuentros;
 import java.util.List;
 
 import es.androidespixelados.gestorpartida.anima.modelo.ColeccionRecursos;
-import es.androidespixelados.gestorpartida.anima.modelo.ModeloBase;
 import es.androidespixelados.gestorpartida.anima.modelo.Personaje;
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
 
 /**
  * Un encuentro es una escena de combate en la que se definen los actores que participan en el mismo.

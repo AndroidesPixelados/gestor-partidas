@@ -3,6 +3,8 @@
  */
 package es.androidespixelados.gestorpartida.anima.modelo;
 
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
+
 /**
  * El tipo de atributo. Contiene tanto un tipo semántico
  * como sintáctico, y está asociado a un sistema de juego.

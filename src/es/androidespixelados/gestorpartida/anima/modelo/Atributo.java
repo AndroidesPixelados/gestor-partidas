@@ -3,6 +3,8 @@
  */
 package es.androidespixelados.gestorpartida.anima.modelo;
 
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
+
 /**
  * Un atributo para un personaje.
  * 

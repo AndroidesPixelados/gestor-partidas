@@ -5,6 +5,9 @@ package es.androidespixelados.gestorpartida.anima.modelo;
 
 import java.util.List;
 
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
+import es.androidespixelados.gestorpartida.modelo.RecursoMultimedia;
+
 /**
  * Abstracción de una lista de recursos multimedia.
  * Sirve de base para la lista de reproducción de música

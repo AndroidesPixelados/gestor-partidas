@@ -5,6 +5,8 @@ package es.androidespixelados.gestorpartida.anima.modelo;
 
 import java.util.List;
 
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
+
 /**
  * Una partida.
  * Contiene todos los datos registrados para la misma. Puede cachearse para evitar consultas a base de datos.

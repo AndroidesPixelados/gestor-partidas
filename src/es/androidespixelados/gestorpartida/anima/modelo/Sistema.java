@@ -6,6 +6,7 @@ package es.androidespixelados.gestorpartida.anima.modelo;
 import java.util.List;
 
 import es.androidespixelados.gestorpartida.anima.modelo.modulos.ModuloPersonaje;
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
 
 /**
  * El sistema jugable de una partida.
