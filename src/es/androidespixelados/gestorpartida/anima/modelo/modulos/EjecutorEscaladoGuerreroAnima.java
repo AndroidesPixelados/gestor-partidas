@@ -5,7 +5,7 @@ package es.androidespixelados.gestorpartida.anima.modelo.modulos;
 
 import java.util.Map;
 
-import es.androidespixelados.gestorpartida.anima.modelo.Atributo;
+import es.androidespixelados.gestorpartida.modelo.Atributo;
 
 /**
  * Ejecutor de escalado de ejemplo para ilustrar el funcionamiento de los módulos de personajes.

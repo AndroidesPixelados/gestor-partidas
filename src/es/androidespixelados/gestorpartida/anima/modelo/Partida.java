@@ -6,6 +6,8 @@ package es.androidespixelados.gestorpartida.anima.modelo;
 import java.util.List;
 
 import es.androidespixelados.gestorpartida.modelo.ModeloBase;
+import es.androidespixelados.gestorpartida.modelo.Personaje;
+import es.androidespixelados.gestorpartida.modelo.Sistema;
 
 /**
  * Una partida.

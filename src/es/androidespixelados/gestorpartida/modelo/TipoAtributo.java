@@ -1,9 +1,7 @@
 /**
  * 
  */
-package es.androidespixelados.gestorpartida.anima.modelo;
-
-import es.androidespixelados.gestorpartida.modelo.ModeloBase;
+package es.androidespixelados.gestorpartida.modelo;
 
 /**
  * El tipo de atributo. Contiene tanto un tipo semántico
@@ -23,6 +21,11 @@ public class TipoAtributo extends ModeloBase {
 	 * El tipo de atributo sintácticamente hablando.
 	 */
 	private TipoDato	sintactico;
+
+	/**
+	 * El sistema de juego al que está asociado el atributo.
+	 */
+	private Sistema		sistema;
 
 	/**
 	 * Obtiene el semantico.
@@ -60,6 +63,26 @@ public class TipoAtributo extends ModeloBase {
 	 */
 	public void setSintactico(TipoDato sintactico) {
 		this.sintactico = sintactico;
+	}
+
+	/**
+	 * Obtiene el sistema.
+	 * 
+	 * @return sistema.
+	 */
+	public Sistema getSistema() {
+		return sistema;
+	}
+
+	/**
+	 * Establece el sistema
+	 * 
+	 * @param sistema
+	 *            establece sistema a sistema
+	 * @return el objeto
+	 */
+	public void setSistema(Sistema sistema) {
+		this.sistema = sistema;
 	}
 
 }
