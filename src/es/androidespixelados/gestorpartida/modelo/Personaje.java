@@ -1,18 +1,17 @@
-package es.androidespixelados.gestorpartida.anima.modelo;
+package es.androidespixelados.gestorpartida.modelo;
 
 import java.util.List;
 import java.util.Map;
 
-import es.androidespixelados.gestorpartida.modelo.Imagen;
-import es.androidespixelados.gestorpartida.modelo.ModeloBase;
-import es.androidespixelados.gestorpartida.modelo.Trama;
-
+/**
+ * Un personaje en abstracto es una colección de atributos, imágenes y tramas asociadas.
+ * Cada sistema necesitará implementar su propio tipo de personaje derivado de este si
+ * quiere aportarle más funcionalidad.
+ * 
+ * @author Loïc Prieto
+ * 
+ */
 public class Personaje extends ModeloBase {
-
-	/**
-	 * El tipo del personaje.
-	 */
-	private TipoPersonaje			tipo;
 
 	/**
 	 * El listado de atributos. La clave del mapa es el nombre del atributo.
@@ -29,21 +28,6 @@ public class Personaje extends ModeloBase {
 	 * Una lista de imágenes asociadas al personaje.
 	 */
 	private List<Imagen>			imagenes;
-
-	/**
-	 * @return the tipo
-	 */
-	public TipoPersonaje getTipo() {
-		return tipo;
-	}
-
-	/**
-	 * @param tipo
-	 *            the tipo to set
-	 */
-	public void setTipo(TipoPersonaje tipo) {
-		this.tipo = tipo;
-	}
 
 	/**
 	 * Obtiene el tramas.

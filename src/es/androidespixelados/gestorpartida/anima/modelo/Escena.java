@@ -4,6 +4,7 @@ import java.util.List;
 
 import es.androidespixelados.gestorpartida.anima.modelo.encuentros.Encuentro;
 import es.androidespixelados.gestorpartida.modelo.ModeloBase;
+import es.androidespixelados.gestorpartida.modelo.Personaje;
 import es.androidespixelados.gestorpartida.modelo.Trama;
 
 public class Escena extends ModeloBase {
