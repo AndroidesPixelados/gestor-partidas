@@ -5,7 +5,7 @@ package es.androidespixelados.gestorpartida.anima.modelo.modulos;
 
 import java.util.List;
 
-import es.androidespixelados.gestorpartida.anima.modelo.ModeloBase;
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
 
 /**
  * El módulo de comportamiento de un tipo de personaje.

@@ -3,8 +3,8 @@
  */
 package es.androidespixelados.gestorpartida.anima.modelo.modulos;
 
-import es.androidespixelados.gestorpartida.anima.modelo.ModeloBase;
-import es.androidespixelados.gestorpartida.anima.modelo.TipoDato;
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
+import es.androidespixelados.gestorpartida.modelo.TipoDato;
 
 /**
  * Un parámetro de un módulo de personaje.

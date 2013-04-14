@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.androidespixelados.gestorpartida.anima.modelo.modulos.ModuloPersonaje;
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
 
 /**
  * Un tipo de personaje, preconfigurado para poder ser usado rápidamente, ya sea

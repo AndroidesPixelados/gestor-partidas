@@ -7,9 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import es.androidespixelados.gestorpartida.anima.modelo.ModeloBase;
 import es.androidespixelados.gestorpartida.anima.modelo.TipoPersonaje;
 import es.androidespixelados.gestorpartida.anima.modelo.modulos.ParametroModulo;
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
 
 /**
  * Un tipo de encuentro define los tipos de personaje involucrados en el encuentro así como la cantidad de los mismos.

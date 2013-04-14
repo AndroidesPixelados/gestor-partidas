@@ -2,6 +2,8 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
 
 import java.util.List;
 
+import es.androidespixelados.gestorpartida.modelo.ClasePersonaje;
+
 /**
  * Clase provisional en espera de decidir la inclusión de un generador de PNJs
  * 

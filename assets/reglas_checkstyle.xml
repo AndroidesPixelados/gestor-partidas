@@ -5,10 +5,8 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: reglas_checkstyle
-    Description: 
-Reglas de checkstyle para Androides Pixelados
-
+    Checkstyle-Configuration: Checkstyle AndroidesPixelados
+    Description: none
 -->
 <module name="Checker">
   <property name="severity" value="warning"/>
@@ -39,10 +37,6 @@ Reglas de checkstyle para Androides Pixelados
     </module>
     <module name="ConstantName">
       <property name="severity" value="warning"/>
-    </module>
-    <module name="LocalFinalVariableName">
-      <property name="severity" value="warning"/>
-      <property name="format" value="^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$"/>
     </module>
     <module name="LocalVariableName">
       <property name="severity" value="warning"/>
@@ -182,4 +176,3 @@ Reglas de checkstyle para Androides Pixelados
     </module>
   </module>
 </module>
-
