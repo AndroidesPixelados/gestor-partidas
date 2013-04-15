@@ -2,130 +2,110 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
 
 import java.util.List;
 
+import es.androidespixelados.gestorpartida.modelo.Imagen;
+import es.androidespixelados.gestorpartida.modelo.ModeloBase;
+import es.androidespixelados.gestorpartida.modelo.Trama;
+
 /**
  * Las escenas representan, de forma más o menos aproximada, un conjunto homogeneo de encuentros,
  * situaciones y descripciones comunes durante un espacio de tiempo, Podría utilizarse como analogía
  * el concepto de partida diaria dentro de una campaña general, aunque su tiempo de juego no siempre
  * se circunscribe al día.
  * 
- * Como elementos destacados se incluye su descripción, lista de encuentros y lista de personajes que
- * intervienen, tanto jugadores como no jugadores.
+ * Como elementos destacados se incluyen las tramas asociadas, lista de encuentros y lista de personajes 
+ * que intervienen, tanto jugadores como no jugadores.
  * 
  * @author Javi Montes
  *
  */
-public class Escena {
+public class Escena extends ModeloBase {
 	
 	/**
-	 * ID de la escena
+	 * Tramas asociadas a la escena
 	 */
-	private Long id;
-	
-	/**
-	 * Nombre de la escena
-	 */
-	private String nombre;
-	
-	/**
-	 * Descripción de la escena
-	 */
-	private String descripcion;
-	
-	
+	private List<Trama> tramas;
+		
 	/**
 	 * Lista de encuentros que incluye la escena
 	 */
-	private List<Encuentro> listaEncuentrosEscena;
+	private List<EncuentroDungeons> encuentros;
 	
 	/**
 	 * Lista de personajes que incluye la escena
 	 */
-	private List<Personaje> listaPersonajesEscena;
+	private List<PersonajeDungeons> personajes;
+	
+	/**
+	 * Lista de imágenes que incluye la escena
+	 */
+	private List<Imagen> imagenes;
 
 	/**
-	 * Obtiene el id.
-	 * @return id.
+	 * Obtiene el tramas.
+	 * @return tramas.
 	 */
-	public Long getId() {
-		return id;
+	public List<Trama> getTramas() {
+		return tramas;
 	}
 
 	/**
-	 * Establece el  id
-	 * @param id establece id a id
+	 * Establece el  tramas
+	 * @param tramas establece tramas a tramas
 	 * @return el objeto
 	 */
-	public void setId(Long id) {
-		this.id = id;
+	public void setTramas(List<Trama> tramas) {
+		this.tramas = tramas;
 	}
 
 	/**
-	 * Obtiene el nombre.
-	 * @return nombre.
+	 * Obtiene el encuentros.
+	 * @return encuentros.
 	 */
-	public String getNombre() {
-		return nombre;
+	public List<EncuentroDungeons> getEncuentros() {
+		return encuentros;
 	}
 
 	/**
-	 * Establece el  nombre
-	 * @param nombre establece nombre a nombre
+	 * Establece el  encuentros
+	 * @param encuentros establece encuentros a encuentros
 	 * @return el objeto
 	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setEncuentros(List<EncuentroDungeons> encuentros) {
+		this.encuentros = encuentros;
 	}
 
 	/**
-	 * Obtiene el descripcion.
-	 * @return descripcion.
+	 * Obtiene el personajes.
+	 * @return personajes.
 	 */
-	public String getDescripcion() {
-		return descripcion;
+	public List<PersonajeDungeons> getPersonajes() {
+		return personajes;
 	}
 
 	/**
-	 * Establece el  descripcion
-	 * @param descripcion establece descripcion a descripcion
+	 * Establece el  personajes
+	 * @param personajes establece personajes a personajes
 	 * @return el objeto
 	 */
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setPersonajes(List<PersonajeDungeons> personajes) {
+		this.personajes = personajes;
 	}
 
 	/**
-	 * Obtiene el listaEncuentrosEscena.
-	 * @return listaEncuentrosEscena.
+	 * Obtiene el imagenes.
+	 * @return imagenes.
 	 */
-	public List<Encuentro> getListaEncuentrosEscena() {
-		return listaEncuentrosEscena;
+	public List<Imagen> getImagenes() {
+		return imagenes;
 	}
 
 	/**
-	 * Establece el  listaEncuentrosEscena
-	 * @param listaEncuentrosEscena establece listaEncuentrosEscena a listaEncuentrosEscena
+	 * Establece el  imagenes
+	 * @param imagenes establece imagenes a imagenes
 	 * @return el objeto
 	 */
-	public void setListaEncuentrosEscena(List<Encuentro> listaEncuentrosEscena) {
-		this.listaEncuentrosEscena = listaEncuentrosEscena;
+	public void setImagenes(List<Imagen> imagenes) {
+		this.imagenes = imagenes;
 	}
-
-	/**
-	 * Obtiene el listaPersonajesEscena.
-	 * @return listaPersonajesEscena.
-	 */
-	public List<Personaje> getListaPersonajesEscena() {
-		return listaPersonajesEscena;
-	}
-
-	/**
-	 * Establece el  listaPersonajesEscena
-	 * @param listaPersonajesEscena establece listaPersonajesEscena a listaPersonajesEscena
-	 * @return el objeto
-	 */
-	public void setListaPersonajesEscena(List<Personaje> listaPersonajesEscena) {
-		this.listaPersonajesEscena = listaPersonajesEscena;
-	}
-
-
+	
 }

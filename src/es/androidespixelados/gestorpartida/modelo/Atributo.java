@@ -1,6 +1,3 @@
-/**
- * 
- */
 package es.androidespixelados.gestorpartida.modelo;
 
 

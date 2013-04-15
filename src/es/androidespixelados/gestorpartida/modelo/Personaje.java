@@ -28,6 +28,11 @@ public class Personaje extends ModeloBase {
 	 * Una lista de imágenes asociadas al personaje.
 	 */
 	private List<Imagen>			imagenes;
+	
+	/**
+	 * Lista de efectos sufridos en combate
+	 */
+	private List<EfectoCombate>	efectosSufridosEnCombate;
 
 	/**
 	 * Obtiene el tramas.
@@ -85,4 +90,23 @@ public class Personaje extends ModeloBase {
 	public void setAtributos(Map<String, Atributo> atributos) {
 		this.atributos = atributos;
 	}
+
+	/**
+	 * Obtiene el efectosSufridosEnCombate.
+	 * 
+	 * @return efectosSufridosEnCombate.
+	 */
+	public List<EfectoCombate> getEfectosSufridosEnCombate() {
+		return efectosSufridosEnCombate;
+	}
+
+	/**
+	 * Establece el  efectosSufridosEnCombate
+	 * @param efectosSufridosEnCombate
+	 * @return el objeto
+	 */
+	public void setEfectosSufridosEnCombate(List<EfectoCombate> efectosSufridosEnCombate) {
+		this.efectosSufridosEnCombate = efectosSufridosEnCombate;
+	}
+	
 }

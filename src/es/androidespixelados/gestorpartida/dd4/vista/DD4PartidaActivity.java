@@ -26,14 +26,14 @@ public class DD4PartidaActivity extends FragmentActivity {
 		
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.dd4_partida_main);
-		this.setTitle("Gestión de partida: WaterDeep");
+		this.setTitle("GestiÃ³n de partida: WaterDeep");
 		
 		/** Obtengo el TextView donde se muestra el nombre de la partida **/
 		TextView lblNombrePartida = (TextView)findViewById(R.id.nombrePartida);
 		contenidoDerecho = (TextView)findViewById(R.id.contenidoDerecho);
 		
 		/**
-		 * Damos nombre a la partida. Posteriormente se hará de forma dinámica.
+		 * Damos nombre a la partida. Posteriormente se harï¿½ de forma dinï¿½mica.
 		 */
 		lblNombrePartida.setText("WaterDeep");
 		
@@ -48,10 +48,10 @@ public class DD4PartidaActivity extends FragmentActivity {
 			@Override
 			public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 				
-				/** Obtiene el nombre de la opción seleccionada **/
+				/** Obtiene el nombre de la opciï¿½n seleccionada **/
 				String opcionSeleccionada = (String)parent.getExpandableListAdapter().getChild(groupPosition, childPosition);
 				
-				/** Coloca el nombre de la opción seleccionada en el fragmento derecho **/
+				/** Coloca el nombre de la opciÃ³n seleccionada en el fragmento derecho **/
 				contenidoDerecho.setText(opcionSeleccionada);
 				
 				return false;
