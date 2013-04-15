@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="16"
         android:targetSdkVersion="17" />
 
     <application
@@ -27,7 +27,7 @@
         
         <activity android:name="es.androidespixelados.gestorpartida.dd4.vista.DD4PartidaActivity" />
        
-        <activity android:name="es.androidespixelados.gestorpartida.anima.vista.AnimaPartidaActivity" />
+        <activity android:name="es.androidespixelados.gestorpartida.anima.controlador.AnimaPartidaActivity" />
         
     </application>
 

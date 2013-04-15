@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="errores_apertura_fichero">Error al abrir un fichero: %1$s</string>
+</resources>
