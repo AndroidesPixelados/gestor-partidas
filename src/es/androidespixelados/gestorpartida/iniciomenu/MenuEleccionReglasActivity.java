@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import es.androidespixelados.gestorpartida.R;
-import es.androidespixelados.gestorpartida.anima.vista.AnimaPartidaActivity;
+import es.androidespixelados.gestorpartida.anima.controlador.AnimaPartidaActivity;
 import es.androidespixelados.gestorpartida.dd4.vista.DD4PartidaActivity;
 
 /**
