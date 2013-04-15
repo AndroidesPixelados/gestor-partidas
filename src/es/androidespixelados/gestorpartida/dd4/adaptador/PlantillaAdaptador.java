@@ -15,15 +15,31 @@ public class PlantillaAdaptador extends BaseExpandableListAdapter {
 	
 	private Context context;
 	
+	/** Padding de componente hijo **/
+	private final int paddingSuperiorHijo = 10;
+	private final int paddingInferiorHijo = 10;
+	private final int paddingDerechoHijo = 30;
+	private final int paddingIzquierdoHijo = 0;
+	
+	/** Padding de componente padre **/
+	private final int paddingSuperiorPadre = 0;
+	private final int paddingInferiorPadre = 0;
+	private final int paddingDerechoPadre = 25;
+	private final int paddingIzquierdoPadre = 0;
+	
+	/** Padding de texto **/
+	private final int tama√±oTextoChild = 16;
+	private final int tama√±oTextoGroup = 18;
+		
 	/** Elementos que componen la ExpandableListView **/
-	private String nombreGrupo[] = {"Plantillas", "Personajes", "Escenas", "Utilidades", "LibrerÌa General"};
+	private String nombreGrupo[] = {"Plantillas", "Personajes", "Escenas", "Utilidades", "Librer√≠a General"};
 	private String nombreHijo[][] = {
 			
 			{"Personajes", "Clases", "Encuentros"},
 			{"Jugadores", "No Jugadores"},
-			{"Encuentros", "Personajes", "Im·genes", "M˙sica", "Tramas"},
+			{"Encuentros", "Personajes", "Im√°genes", "M√∫sica", "Tramas"},
 			{"Dados"},
-			{"Im·genes", "M˙sica"}
+			{"Im√°genes", "M√∫sica"}
 	
 	};
 
@@ -53,8 +69,8 @@ public class PlantillaAdaptador extends BaseExpandableListAdapter {
 		TextView tv = new TextView(context);
 		
 		tv.setText(nombreHijo[groupPosition][childPosition]);
-		tv.setPadding(30, 10, 0, 10);
-		tv.setTextSize(16);
+		tv.setPadding(paddingDerechoHijo, paddingSuperiorHijo, paddingIzquierdoHijo, paddingInferiorHijo);
+		tv.setTextSize(tama√±oTextoChild);
 		
 		return tv;
 	}
@@ -88,8 +104,8 @@ public class PlantillaAdaptador extends BaseExpandableListAdapter {
 		TextView tv = new TextView(context);
 		
 		tv.setText(nombreGrupo[groupPosition]);
-		tv.setPadding(25, 0, 0, 0);
-		tv.setTextSize(18);
+		tv.setPadding(paddingDerechoPadre, paddingSuperiorPadre, paddingIzquierdoPadre, paddingInferiorPadre);
+		tv.setTextSize(tama√±oTextoGroup);
 		
 		return tv;
 	}
