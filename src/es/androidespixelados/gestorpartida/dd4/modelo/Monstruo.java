@@ -1,5 +1,7 @@
 package es.androidespixelados.gestorpartida.dd4.modelo;
 
+import java.util.List;
+
 /**
  * Esta clase engloba la descripción de monstruos utilizados en encuentros. Hereda de
  * Personaje ya que tienen múltiples atributos en común 
@@ -7,9 +9,7 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
  * @author Javi Montes
  *
  */
-public class Monstruo extends Personaje {
-	
-	
+public class Monstruo extends PersonajeDungeons {
 	
 	/**
 	 * Rol principal de la criatura (artillería, controlador...etc)
@@ -17,9 +17,15 @@ public class Monstruo extends Personaje {
 	private Rol rol;
 	
 	/**
-	 * estaMuerto booleano que marca si un monstruo está muerto o no
+	 * Lista de resistencias (Ej: Miedo 10, Calor 5...etc)
 	 */
-	private boolean estaMuerto;
+	private List<Resistencias> listaDeResistencias;
+	
+	/**
+	 * Los monstruos pueden ser resistentes a uno o más efectos
+	 * Ej: Miedo, enfermedad...etc.
+	 */
+	private List<Inmunidades> listaDeInmunidades;
 
 	/**
 	 * Obtiene el rol.
@@ -39,20 +45,37 @@ public class Monstruo extends Personaje {
 	}
 
 	/**
-	 * Obtiene el estaMuerto.
-	 * @return estaMuerto.
+	 * Obtiene el listaDeResistencias.
+	 * @return listaDeResistencias.
 	 */
-	public boolean isEstaMuerto() {
-		return estaMuerto;
+	public List<Resistencias> getListaDeResistencias() {
+		return listaDeResistencias;
 	}
 
 	/**
-	 * Establece el  estaMuerto
-	 * @param estaMuerto establece estaMuerto a estaMuerto
+	 * Establece el  listaDeResistencias
+	 * @param listaDeResistencias establece listaDeResistencias a listaDeResistencias
 	 * @return el objeto
 	 */
-	public void setEstaMuerto(boolean estaMuerto) {
-		this.estaMuerto = estaMuerto;
+	public void setListaDeResistencias(List<Resistencias> listaDeResistencias) {
+		this.listaDeResistencias = listaDeResistencias;
+	}
+
+	/**
+	 * Obtiene el listaDeInmunidades.
+	 * @return listaDeInmunidades.
+	 */
+	public List<Inmunidades> getListaDeInmunidades() {
+		return listaDeInmunidades;
+	}
+
+	/**
+	 * Establece el  listaDeInmunidades
+	 * @param listaDeInmunidades establece listaDeInmunidades a listaDeInmunidades
+	 * @return el objeto
+	 */
+	public void setListaDeInmunidades(List<Inmunidades> listaDeInmunidades) {
+		this.listaDeInmunidades = listaDeInmunidades;
 	}
 
 }
