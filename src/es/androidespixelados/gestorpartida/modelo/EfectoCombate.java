@@ -10,5 +10,27 @@ package es.androidespixelados.gestorpartida.modelo;
  * 
  */
 public class EfectoCombate extends ModeloBase {
+	
+	/** Icono asociado **/
+	private Imagen icono;
+
+	/**
+	 * Obtiene el icono.
+	 * @return icono.
+	 */
+	public Imagen getIcono() {
+		return icono;
+	}
+
+	/**
+	 * Establece el  icono
+	 * @param icono establece icono a icono
+	 * @return el objeto
+	 */
+	public void setIcono(Imagen icono) {
+		this.icono = icono;
+	}
+	
+	
 
 }
