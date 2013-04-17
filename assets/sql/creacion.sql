@@ -70,6 +70,6 @@ create table trama (
 		constraint trama_pk primary key autoincrement,
 	nombre varchar(255),
 	texto text not null,
-	contexto integer not null,
+	contexto integer not null
 	
 );

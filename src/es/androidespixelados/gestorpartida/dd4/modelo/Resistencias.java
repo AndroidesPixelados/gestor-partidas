@@ -10,12 +10,36 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
 public enum Resistencias {
 	
 	/** Resistencia al frío **/
-	FRIO,
+	FRIO(1),
 	
 	/** Resistencia al calor **/
-	CALOR,
+	CALOR(2),
 	
 	/** Resistencia al daño radiante **/
-	RADIANTE;
+	RADIANTE(3);
+	
+	/** Valor del enumerador **/
+	private int valor;
+	
+	Resistencias(int valor) {
+		
+	}
+
+	/**
+	 * Obtiene el valor.
+	 * @return valor.
+	 */
+	public int getValor() {
+		return valor;
+	}
+
+	/**
+	 * Establece el  valor
+	 * @param valor establece valor a valor
+	 * @return el objeto
+	 */
+	public void setValor(int valor) {
+		this.valor = valor;
+	}
 
 }

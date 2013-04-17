@@ -10,18 +10,44 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
 public enum ClasePersonaje {
 	
 	/** Clase Clérigo **/
-	CLERIGO,
+	CLERIGO(1),
 	
 	/** Clase Guerrero **/
-	GUERRERO,
+	GUERRERO(2),
 	
 	/** Clase Paladín **/
-	PALADIN,
+	PALADIN(3),
 	
 	/** Clase Mago **/
-	MAGO,
+	MAGO(4),
 	
 	/** Pícaro **/
-	PICARO;
+	PICARO(5);
+	
+	/** Valor del Enumerador **/
+	private int valor;
+
+
+	ClasePersonaje(int valor) {
+		
+	}
+	
+	/**
+	 * Obtiene el valor.
+	 * @return valor.
+	 */
+	public int getValor() {
+		return valor;
+	}
+
+
+	/**
+	 * Establece el  valor
+	 * @param valor establece valor a valor
+	 * @return el objeto
+	 */
+	public void setValor(int valor) {
+		this.valor = valor;
+	}
 
 }
