@@ -13,6 +13,11 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+import com.google.inject.Singleton;
+
 import es.androidespixelados.gestorpartida.R;
 
 /**
@@ -21,58 +26,40 @@ import es.androidespixelados.gestorpartida.R;
  * @author Loïc Prieto
  * 
  */
+@Singleton
 public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 
 	/**
 	 * Nombre de la carpeta donde están contenidos los scripts SQL.
 	 * Ruta relativa de la carpeta Assets.
 	 */
-	private static final String				CARPETA_SQL				= "sql";
+	private static final String			CARPETA_SQL				= "sql";
 	/**
 	 * Separador de ruta entre carpetas. Como estamos en Android, es /
 	 */
-	private static final String				SEPARADOR_RUTA			= "/";
+	private static final String			SEPARADOR_RUTA			= "/";
 	/**
 	 * El nombre del fichero DDL de la base de datos de la aplicación.
 	 */
-	private static final String				FICHERO_CREACION		= "creacion.sql";
+	private static final String			FICHERO_CREACION		= "creacion.sql";
+
 	/**
 	 * El nombre del fichero con los datos de prueba de la aplicación.
 	 */
-	private static final String				FICHERO_DATOS_PRUEBA	= "datos_prueba.sql";
+	private static final String			FICHERO_DATOS_PRUEBA	= "datos_prueba.sql";
 
 	/**
 	 * Un contexto android para poder obtener los recursos de la aplicación.
 	 */
-	private Context							contexto;
-
-	/**
-	 * Instancia singleton de la clase.
-	 */
-	private static GestorPartidaSQLHelper	instancia;
-
-	/**
-	 * Constructor factoría de la clase auxiliar de SQLite.
-	 * 
-	 * @param contexto
-	 *            el contexto de la actividad.
-	 * @return una instancia de la clase auxiliar.
-	 */
-	public static synchronized GestorPartidaSQLHelper getHelper(Context contexto) {
-		if (instancia == null) {
-			instancia = new GestorPartidaSQLHelper(contexto);
-		}
-
-		return instancia;
-	}
+	@Inject
+	private static Provider<Context>	contextProvider;
 
 	/**
 	 * Constructor. Privado para obligar a usar el constructor singleton.
 	 */
-	private GestorPartidaSQLHelper(Context contexto) {
-		super(contexto, contexto.getString(R.string.db_nombre), null, Integer.parseInt(contexto
-				.getString(R.string.db_version)));
-		this.contexto = contexto;
+	public GestorPartidaSQLHelper() {
+		super(contextProvider.get(), contextProvider.get().getString(R.string.db_nombre), null, Integer
+				.parseInt(contextProvider.get().getString(R.string.db_version)));
 	}
 
 	/**
@@ -84,6 +71,7 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 			List<String> instruccionesSQLCreacion = obtenerSQLCreacion();
 			List<String> instruccionesSQLDatosPrueba = obtenerSQLDatosPruebas();
 			instruccionesSQLCreacion.addAll(instruccionesSQLDatosPrueba);
+
 			db.beginTransaction();
 			try {
 				for (String instruccion : instruccionesSQLCreacion) {
@@ -150,6 +138,7 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	 * @throws IOException
 	 */
 	private String obtenerContenidoFichero(String nombreFichero) throws IOException {
+		Context contexto = contextProvider.get();
 		StringBuilder sb = new StringBuilder();
 		BufferedReader br = new BufferedReader(new InputStreamReader(contexto.getAssets().open(nombreFichero)));
 
@@ -179,26 +168,6 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	}
 
 	/**
-	 * Obtiene el contexto.
-	 * 
-	 * @return contexto.
-	 */
-	public Context getContexto() {
-		return contexto;
-	}
-
-	/**
-	 * Establece el contexto
-	 * 
-	 * @param contexto
-	 *            establece contexto a contexto
-	 * @return el objeto
-	 */
-	public void setContexto(Context contexto) {
-		this.contexto = contexto;
-	}
-
-	/**
 	 * Método fachada para obtener un recurso string de la aplicación, a través del contexto asociado a este cargador
 	 * SQL.
 	 * 
@@ -207,13 +176,7 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	 * @return el recurso si existe, nulo sino. Si no hay contexto asociado, también devuelve nulo.
 	 */
 	private String getString(int idString, Object... params) {
-		String resultado = null;
-
-		if (this.contexto != null) {
-			resultado = this.contexto.getString(idString, params);
-		}
-
-		return resultado;
+		return contextProvider.get().getString(idString, params);
 	}
 
 }

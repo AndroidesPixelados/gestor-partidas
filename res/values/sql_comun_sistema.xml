@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sql_sistema_selectAll">SELECT id,nombre FROM sistema</string>
+    <string name="sql_sistema_select_por_nombre" formatted="false">SELECT id,nombre FROM sistema WHERE nombre like \'%${nombre}%\'</string>
+</resources>

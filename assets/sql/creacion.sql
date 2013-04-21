@@ -71,5 +71,4 @@ create table trama (
 	nombre varchar(255),
 	texto text not null,
 	contexto integer not null
-	
 );
