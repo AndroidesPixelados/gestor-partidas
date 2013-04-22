@@ -12,7 +12,7 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
  */
 public enum Inmunidades {
 	
-	/** Inmunidad a miedo **/
+	/** Inmunidad al miedo **/
 	MIEDO,
 	
 	/** Inmunidad a ceguera **/

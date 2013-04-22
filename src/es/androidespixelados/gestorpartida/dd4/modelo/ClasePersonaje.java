@@ -9,7 +9,6 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
  */
 public enum ClasePersonaje {
 	
-	/** Clase Clérigo **/
 	CLERIGO,
 	
 	/** Clase Guerrero **/
@@ -23,5 +22,6 @@ public enum ClasePersonaje {
 	
 	/** Pícaro **/
 	PICARO;
+
 
 }

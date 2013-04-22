@@ -12,27 +12,27 @@ package es.androidespixelados.gestorpartida.modelo;
  * 
  */
 public class RecursoMultimedia extends ModeloBase {
+	
 	/**
-	 * La URL del recurso, partiendo de la carpeta de la aplicación.
+	 * La ruta del recurso, partiendo de la carpeta de la aplicación.
 	 */
-	private String	url;
+	private String	ruta;
 
 	/**
-	 * Obtiene el url.
-	 * 
-	 * @return url
+	 * Obtiene el ruta.
+	 * @return ruta.
 	 */
-	public String getUrl() {
-		return url;
+	public String getRuta() {
+		return ruta;
 	}
 
 	/**
-	 * Establece el valor de url al valor de url.
-	 * 
-	 * @param url
-	 *            el valor a establecer
+	 * Establece el  ruta
+	 * @param ruta establece ruta a ruta
+	 * @return el objeto
 	 */
-	public void setUrl(String url) {
-		this.url = url;
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
 	}
+
 }
