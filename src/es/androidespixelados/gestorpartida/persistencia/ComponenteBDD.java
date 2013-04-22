@@ -37,7 +37,7 @@ public class ComponenteBDD {
 	 * Ejecuta una consulta en la base de datos.
 	 * Los parametros se remplazan en la consulta por su nombre.
 	 * Ejemplo:
-	 * consulta: select * from tablalol where nombre like '${manol}%'
+	 * consulta: select * from tablalol where nombre like '${nombre}%'
 	 * 
 	 * @param consulta
 	 *            la consulta sql
@@ -45,8 +45,8 @@ public class ComponenteBDD {
 	 *            los parametros, cuya clave de mapa es el nombre del mismo.
 	 * @return el cursor SQL resultante de la consulta.
 	 */
-	public Cursor ejecutarConsulta(String consulta, Map<String, Object> parametros) {
-		Cursor resultado = null;
+	public CursorAP ejecutarConsulta(String consulta, Map<String, Object> parametros) {
+		CursorAP resultado = null;
 
 		SQLiteDatabase db = gestorSQL.getWritableDatabase();
 
@@ -55,10 +55,14 @@ public class ComponenteBDD {
 			consultaParseada = aplicarParametros(consulta, parametros);
 		}
 
+		Cursor resultadoIntermedio = null;
 		if (consultaParseada != null) {
-			resultado = db.rawQuery(consultaParseada, null);
+			resultadoIntermedio = db.rawQuery(consultaParseada, null);
 		} else {
-			resultado = db.rawQuery(consulta, null);
+			resultadoIntermedio = db.rawQuery(consulta, null);
+		}
+		if (resultadoIntermedio != null) {
+			resultado = new DecoradorCursorAP(resultadoIntermedio);
 		}
 
 		return resultado;
@@ -68,7 +72,7 @@ public class ComponenteBDD {
 	 * Ejecuta una consulta en la base de datos.
 	 * Los parametros se remplazan en la consulta por su nombre.
 	 * Ejemplo:
-	 * consulta: select * from tablalol where nombre like '${manol}%'
+	 * consulta: select * from tablalol where nombre like '${nombre}%'
 	 * 
 	 * @param consulta
 	 *            el id en la clase R de la consulta en un fichero de recursos.
@@ -76,7 +80,7 @@ public class ComponenteBDD {
 	 *            los parametros, cuya clave de mapa es el nombre del mismo.
 	 * @return el cursor SQL resultante de la consulta.
 	 */
-	public Cursor ejecutarConsulta(int idConsulta, Map<String, Object> parametros) {
+	public CursorAP ejecutarConsulta(int idConsulta, Map<String, Object> parametros) {
 		String consulta = i18n.getTexto(idConsulta);
 		return ejecutarConsulta(consulta, parametros);
 	}
@@ -88,7 +92,7 @@ public class ComponenteBDD {
 	 *            el id en la clase R de la consulta en un fichero de recursos.
 	 * @return el cursor SQL resultante de la consulta.
 	 */
-	public Cursor ejecutarConsulta(int idConsulta) {
+	public CursorAP ejecutarConsulta(int idConsulta) {
 		return ejecutarConsulta(idConsulta, null);
 	}
 
