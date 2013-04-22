@@ -25,7 +25,7 @@ public abstract class ActividadBase extends Activity {
 	 * @return la conexión inicializada en la modalidad deseada.
 	 */
 	protected SQLiteDatabase obtenerConexionABDD(TipoConexionBDD tipoConexion) {
-		GestorPartidaSQLHelper sqlHelper = GestorPartidaSQLHelper.getHelper(this);
+		GestorPartidaSQLHelper sqlHelper = GestorPartidaSQLHelper.getHelper(ActividadBase.this);
 		SQLiteDatabase db = null;
 		switch (tipoConexion) {
 			case ESCRITURA: {

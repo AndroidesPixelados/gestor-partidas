@@ -1,5 +1,7 @@
 package es.androidespixelados.gestorpartida.iniciomenu;
 
+import roboguice.inject.InjectView;
+
 import es.androidespixelados.gestorpartida.R;
 import android.app.Activity;
 import android.content.Intent;
@@ -9,22 +11,25 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 /**
- * Actividad para el menú inicial de la aplicación
+ * Actividad para el menÃº inicial de la aplicaciÃ³n
  * @author Javi Montes
  *
  */
 public class MenuInicialActivity extends Activity {
+	
+	@InjectView(R.id.botonNuevaPartida) Button btnNuevaPartida;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.menu_inicial_aplicacion);
 		
-		/**Botón Nueva Partida**/
-		final Button btnNuevaPartida = (Button)findViewById(R.id.botonNuevaPartida);
+		/**BotÃ³n Nueva Partida**/
+		//final Button btnNuevaPartida = (Button)findViewById(R.id.botonNuevaPartida);
+		
 		
 		/**
-		 * Evento click lleva al menú de elección de reglas
+		 * Evento click lleva al menÃº de elecciÃ³n de reglas
 		 */
 		btnNuevaPartida.setOnClickListener(new OnClickListener() {
 			
