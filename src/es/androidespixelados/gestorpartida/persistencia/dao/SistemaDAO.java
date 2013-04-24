@@ -8,12 +8,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
 import es.androidespixelados.gestorpartida.R;
 import es.androidespixelados.gestorpartida.modelo.Sistema;
-import es.androidespixelados.gestorpartida.persistencia.ComponenteBDD;
 import es.androidespixelados.gestorpartida.persistencia.CursorAP;
 
 /**
@@ -23,10 +21,7 @@ import es.androidespixelados.gestorpartida.persistencia.CursorAP;
  * 
  */
 @Singleton
-public class SistemaDAO {
-
-	@Inject
-	private ComponenteBDD	db;
+public class SistemaDAO extends DAOBase {
 
 	/**
 	 * Obtiene todos los sistemas disponibles.
@@ -42,7 +37,7 @@ public class SistemaDAO {
 
 		Map<String, Object> parametros = new HashMap<String, Object>();
 		parametros.put(PARAMETRO_NOMBRE, nombre);
-		CursorAP cursor = db.ejecutarConsulta(R.string.sql_sistema_select_por_nombre, parametros);
+		CursorAP cursor = getComponenteBDD().ejecutarConsulta(R.string.sql_sistema_select_por_nombre, parametros);
 
 		while (cursor.move(1)) {
 			Sistema sistema = new Sistema();
