@@ -41,7 +41,7 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	/**
 	 * El nombre del fichero DDL de la base de datos de la aplicación.
 	 */
-	private static final String			FICHERO_CREACION		= "creacion.sql";
+	private static final String			FICHERO_CREACION		= "modelo.sql";
 
 	/**
 	 * El nombre del fichero con los datos de prueba de la aplicación.
