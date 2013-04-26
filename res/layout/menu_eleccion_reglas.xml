@@ -4,11 +4,22 @@
     style="@style/menuInicial" >
 	
     <!-- Encabezado -->
+    
+    <TextView
+        android:id="@+id/nombrePartida"
+        style="@style/encabezado"
+        android:text="@string/nombrePartida" />
+ 
+    <EditText
+        android:id="@+id/inputNombrePartida"
+        style="@style/encabezado"
+        android:inputType="text">
+    </EditText>
 
     <TextView
         android:id="@+id/encabezado"
         style="@style/encabezado"
-        android:text="@string/encabezado" />
+        android:text="@string/encabezadoBotones" />
     
    	<LinearLayout android:id="@+id/botonesReglas"
    	    style="@style/menuInicial.contenedorBotones">
