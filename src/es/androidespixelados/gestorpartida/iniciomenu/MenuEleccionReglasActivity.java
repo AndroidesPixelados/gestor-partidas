@@ -27,10 +27,10 @@ public class MenuEleccionReglasActivity extends ActividadBase {
 	@Inject
 	private PartidaNegocio	partidaNegocio;
 	
-	@InjectView(R.id.botonAnima) Button btnAnima;
-	@InjectView(R.id.botonDungeons4) Button btnDungeons4;
-	@InjectView(R.id.botonVampiro) Button btnVampiro;
-	@InjectView(R.id.inputNombrePartida) EditText txtNombre;
+	@InjectView(R.id.botonAnima) private Button btnAnima;
+	@InjectView(R.id.botonDungeons4) private Button btnDungeons4;
+	@InjectView(R.id.botonVampiro) private Button btnVampiro;
+	@InjectView(R.id.inputNombrePartida) private EditText txtNombre;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

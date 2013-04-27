@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import es.androidespixelados.gestorpartida.R;
-import es.androidespixelados.gestorpartida.dd4.modelo.Partida;
+import es.androidespixelados.gestorpartida.dd4.modelo.PartidaDungeons;
 import es.androidespixelados.gestorpartida.persistencia.CursorAP;
 
 /**
@@ -24,19 +24,19 @@ public class PartidaDAO extends DAOBase {
 	 * @param String nombre
 	 * @return una lista de los Partidas, vacía si no hay ninguno.
 	 */
-	public List<Partida> getPartidasPorNombre(String nombre) {
+	public List<PartidaDungeons> getPartidasPorNombre(String nombre) {
 		final String COLUMNA_NOMBRE = "nombre";
 		final String PARAMETRO_NOMBRE = COLUMNA_NOMBRE;
 		final String COLUMNA_ID = "id";
 
-		List<Partida> partidas = new ArrayList<Partida>();
+		List<PartidaDungeons> partidas = new ArrayList<PartidaDungeons>();
 
 		Map<String, Object> parametros = new HashMap<String, Object>();
 		parametros.put(PARAMETRO_NOMBRE, nombre);
 		CursorAP cursor = getComponenteBDD().ejecutarConsulta(R.string.sql_sistema_select_por_nombre, parametros);
 
 		while (cursor.move(1)) {
-			Partida partida = new Partida();
+			PartidaDungeons partida = new PartidaDungeons();
 			partida.setId(cursor.getLong(COLUMNA_ID));
 			partida.setNombre(cursor.getString(COLUMNA_NOMBRE));
 			partidas.add(partida);
@@ -65,17 +65,17 @@ public class PartidaDAO extends DAOBase {
 	 * Obtiene una lista con todas las partidas disponibles
 	 * @return
 	 */
-	public List<Partida> obtenerListaPartidas() {
+	public List<PartidaDungeons> obtenerListaPartidas() {
 		final String COLUMNA_NOMBRE = "nombre";
 		//final String PARAMETRO_NOMBRE = COLUMNA_NOMBRE;
 		final String COLUMNA_ID = "id";
 		
-		List<Partida> partidas = new ArrayList<Partida>();
+		List<PartidaDungeons> partidas = new ArrayList<PartidaDungeons>();
 		
 		CursorAP cursor = getComponenteBDD().ejecutarConsulta(R.string.sql_partida_selectAll);
 		
 		while (cursor.move(1)) {
-			Partida partida = new Partida();
+			PartidaDungeons partida = new PartidaDungeons();
 			partida.setId(cursor.getLong(COLUMNA_ID));
 			partida.setNombre(cursor.getString(COLUMNA_NOMBRE));
 			partidas.add(partida);

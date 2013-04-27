@@ -3,11 +3,12 @@
  */
 package es.androidespixelados.gestorpartida.dd4.negocio;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.inject.Inject;
 
-import es.androidespixelados.gestorpartida.dd4.modelo.Partida;
+import es.androidespixelados.gestorpartida.dd4.modelo.PartidaDungeons;
 import es.androidespixelados.gestorpartida.persistencia.dao.PartidaDAO;
 
 /**
@@ -26,12 +27,12 @@ public class PartidaNegocio {
 	public List<String> retornaFrasesConPartida() {
 		
 		/**Obtiene la lista de partidas desde la BDD**/
-		List<Partida> listaPartidas = this.partidaDAO.obtenerListaPartidas();
+		List<PartidaDungeons> listaPartidas = this.partidaDAO.obtenerListaPartidas();
 		/**Inicia la lista donde almacenar y procesar los nombres**/
 		List<String> listaNombres = new ArrayList<String>();
 		 
 		// Prueba de inyección de dao
-		for (Partida partida : listaPartidas) {
+		for (PartidaDungeons partida : listaPartidas) {
 			listaNombres.add("El nombre de la partida es: " + partida.getNombre());
 		}
 		
