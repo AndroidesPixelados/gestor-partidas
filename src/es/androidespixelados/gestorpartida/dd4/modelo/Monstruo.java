@@ -112,6 +112,23 @@ public class Monstruo extends PersonajeDungeons {
 	}
 
 	/**
+	 * Obtiene el mapaDeResistencias.
+	 * @return mapaDeResistencias.
+	 */
+	public Map<Resistencias, Integer> getMapaDeResistencias() {
+		return mapaDeResistencias;
+	}
+
+	/**
+	 * Establece el  mapaDeResistencias
+	 * @param mapaDeResistencias establece mapaDeResistencias a mapaDeResistencias
+	 * @return el objeto
+	 */
+	public void setMapaDeResistencias(Map<Resistencias, Integer> mapaDeResistencias) {
+		this.mapaDeResistencias = mapaDeResistencias;
+	}
+
+	/**
 	 * Obtiene el listaDeInmunidades.
 	 * @return listaDeInmunidades.
 	 */

@@ -26,8 +26,8 @@ public class MenuInicialActivity extends ActividadBase {
 	@Inject
 	private PartidaNegocio	partidaNegocio;
 	
-	@InjectView(R.id.botonNuevaPartida) Button btnNuevaPartida;
-	@InjectView(R.id.botonCargarPartida) Button btnCargarPartida;
+	@InjectView(R.id.botonNuevaPartida) private Button btnNuevaPartida;
+	@InjectView(R.id.botonCargarPartida) private Button btnCargarPartida;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

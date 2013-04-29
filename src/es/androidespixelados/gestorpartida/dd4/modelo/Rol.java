@@ -13,10 +13,13 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
  */
 public enum Rol  {
 	
+	/**Tipo controlador**/
 	CONTROLADOR,
 	
+	/**Tipo artillería**/
 	ARTILLERIA,
 	
+	/**Tipo soldado**/
 	SOLDADO;
 
 }

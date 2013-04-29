@@ -25,7 +25,7 @@
         
         <activity android:name="es.androidespixelados.gestorpartida.iniciomenu.MenuEleccionReglasActivity" />
         
-        <activity android:name="es.androidespixelados.gestorpartida.dd4.vista.DD4PartidaActivity" />
+        <activity android:name="es.androidespixelados.gestorpartida.dd4.vista.DD4PartidaActivityFragment" />
        
         <activity android:name="es.androidespixelados.gestorpartida.anima.controlador.AnimaPartidaActivity" />
         
