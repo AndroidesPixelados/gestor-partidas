@@ -6,66 +6,42 @@ package es.androidespixelados.gestorpartida.dd4.adaptador;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.androidespixelados.gestorpartida.adaptador.ListaExpandibleBase;
+
 /**
  * Clase auxiliar donde almacenar la información relativa al menú principal del
  * módulo DD4, de tipo ExpandableListView. Los diferentes items y subitems serán 
  * pasados al constructor del adaptador correspondiente mediante una lista de objetos.
  * 
+ * Hereda de la clase padre ListaExpandibleBase
+ * 
  * @author Javi Montes
  *
  */
-public class DD4MenuPrincipal {
-	
-	private String nombreGrupo;
-	private List<String> itemsGrupoMenu;
+public class MenuPrincipalDD4 extends ListaExpandibleBase {
 	
 	/**
-	 * Obtiene el nombreGrupo.
-	 * @return nombreGrupo.
+	 * Método que crea una lista de strings con los nombres de los diferentes
+	 * menús y submenús. Posteriormente, ésta será pasada como parámetro al constructor 
+	 * del adaptador genérico dentro de la actividad DD4PartidaActiviyFragment
+	 * 
+	 * @return 
 	 */
-	public String getNombreGrupo() {
-		return nombreGrupo;
-	}
-	/**
-	 * Establece el  nombreGrupo
-	 * @param nombreGrupo establece nombreGrupo a nombreGrupo
-	 * @return el objeto
-	 */
-	public void setNombreGrupo(String nombreGrupo) {
-		this.nombreGrupo = nombreGrupo;
-	}
-	
-	/**
-	 * Obtiene el itemsGrupoMenu.
-	 * @return itemsGrupoMenu.
-	 */
-	public List<String> getItemsGrupoMenu() {
-		return itemsGrupoMenu;
-	}
-	/**
-	 * Establece el  itemsGrupoMenu
-	 * @param itemsGrupoMenu establece itemsGrupoMenu a itemsGrupoMenu
-	 * @return el objeto
-	 */
-	public void setItemsGrupoMenu(List<String> itemsGrupoMenu) {
-		this.itemsGrupoMenu = itemsGrupoMenu;
-	}
-	
-	public List<DD4MenuPrincipal> creacionGrupos() {
+	public List<MenuPrincipalDD4> creacionGrupos() {
 		
-		List<DD4MenuPrincipal> grupos = new ArrayList<DD4MenuPrincipal>();
+		List<MenuPrincipalDD4> grupos = new ArrayList<MenuPrincipalDD4>();
 		
 		/** Creación de los cinco grupos de menú **/
-		DD4MenuPrincipal plantillas = new DD4MenuPrincipal();
-		plantillas.setNombreGrupo("Plantillas");
-		DD4MenuPrincipal personajes = new DD4MenuPrincipal();
-		personajes.setNombreGrupo("Personajes");
-		DD4MenuPrincipal escenas = new DD4MenuPrincipal();
-		escenas.setNombreGrupo("Escenas");
-		DD4MenuPrincipal utilidades = new DD4MenuPrincipal();
-		utilidades.setNombreGrupo("Utilidades");
-		DD4MenuPrincipal libreriaGeneral = new DD4MenuPrincipal();
-		libreriaGeneral.setNombreGrupo("Librería General");
+		MenuPrincipalDD4 plantillas = new MenuPrincipalDD4();
+		plantillas.setNombreGrupoMenu("Plantillas");
+		MenuPrincipalDD4 personajes = new MenuPrincipalDD4();
+		personajes.setNombreGrupoMenu("Personajes");
+		MenuPrincipalDD4 escenas = new MenuPrincipalDD4();
+		escenas.setNombreGrupoMenu("Escenas");
+		MenuPrincipalDD4 utilidades = new MenuPrincipalDD4();
+		utilidades.setNombreGrupoMenu("Utilidades");
+		MenuPrincipalDD4 libreriaGeneral = new MenuPrincipalDD4();
+		libreriaGeneral.setNombreGrupoMenu("Librería General");
 		
 		grupos.add(plantillas);
 		grupos.add(personajes);
