@@ -33,7 +33,7 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	 * Nombre de la carpeta donde están contenidos los scripts SQL.
 	 * Ruta relativa de la carpeta Assets.
 	 */
-	private static final String			CARPETA_SQL				= "sql";
+	private static final String			CARPETA_SQL				= "sql/ddl";
 	/**
 	 * Separador de ruta entre carpetas. Como estamos en Android, es /
 	 */
@@ -41,7 +41,7 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	/**
 	 * El nombre del fichero DDL de la base de datos de la aplicación.
 	 */
-	private static final String			FICHERO_CREACION		= "modelo.sql";
+	private static final String			FICHERO_CREACION		= "creacion.sql";
 
 	/**
 	 * El nombre del fichero con los datos de prueba de la aplicación.
@@ -60,6 +60,7 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	public GestorPartidaSQLHelper() {
 		super(contextProvider.get(), contextProvider.get().getString(R.string.db_nombre), null, Integer
 				.parseInt(contextProvider.get().getString(R.string.db_version)));
+
 	}
 
 	/**
@@ -156,7 +157,24 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int arg1, int arg2) {
-		// LOL
+		try {
+			List<String> instruccionesSQLCreacion = obtenerSQLCreacion();
+			List<String> instruccionesSQLDatosPrueba = obtenerSQLDatosPruebas();
+			instruccionesSQLCreacion.addAll(instruccionesSQLDatosPrueba);
+
+			db.beginTransaction();
+			try {
+				for (String instruccion : instruccionesSQLCreacion) {
+					db.execSQL(instruccion);
+				}
+				db.setTransactionSuccessful();
+			} finally {
+				db.endTransaction();
+			}
+
+		} catch (IOException ioe) {
+			Log.e(this.getClass().toString(), getString(R.string.errores_apertura_fichero, ioe.getMessage()));
+		}
 	}
 
 	/**

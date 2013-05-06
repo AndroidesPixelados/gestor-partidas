@@ -1,0 +1,5 @@
+obtenerSistemasPorNombre:
+  select *
+  from sistema
+  where
+    nombre like '%${nombre}%'
