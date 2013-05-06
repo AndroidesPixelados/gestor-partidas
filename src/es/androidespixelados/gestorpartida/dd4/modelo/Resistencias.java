@@ -18,4 +18,5 @@ public enum Resistencias {
 	/** Resistencia al daño radiante **/
 	RADIANTE;
 
+	
 }

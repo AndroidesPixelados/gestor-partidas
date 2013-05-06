@@ -2,7 +2,7 @@ package es.androidespixelados.gestorpartida.dd4.modelo;
 
 import java.util.List;
 
-import es.androidespixelados.gestorpartida.modelo.ModeloBase;
+import es.androidespixelados.gestorpartida.modelo.Partida;
 
 /**
  * Clase descriptora de la Partida (o campaña) como concepto de grupo de escenas que
@@ -11,7 +11,9 @@ import es.androidespixelados.gestorpartida.modelo.ModeloBase;
  * @author Javi Montes
  *
  */
-public class Partida extends ModeloBase {
+public class PartidaDungeons extends Partida {
+	
+	//TO-DO: Incluir personajes
 	
 	/**
 	 * Lista de escenas

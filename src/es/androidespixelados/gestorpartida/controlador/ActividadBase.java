@@ -14,4 +14,5 @@ import roboguice.activity.RoboActivity;
  */
 public abstract class ActividadBase extends RoboActivity {
 
+
 }
