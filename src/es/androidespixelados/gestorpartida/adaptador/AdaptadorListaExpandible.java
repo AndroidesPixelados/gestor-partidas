@@ -2,7 +2,6 @@ package es.androidespixelados.gestorpartida.adaptador;
 
 import java.util.List;
 
-import es.androidespixelados.gestorpartida.R;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,7 +73,8 @@ public class AdaptadorListaExpandible extends BaseExpandableListAdapter {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	
+	/** Retorna la vista del elemento hijo **/
 	@Override
 	public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView,
 			ViewGroup parent) {
@@ -90,7 +90,8 @@ public class AdaptadorListaExpandible extends BaseExpandableListAdapter {
 		   return convertView;
 		
 	}
-
+	
+	/** Retorna el número de hijos por cada elemento padre **/
 	@Override
 	public int getChildrenCount(int groupPosition) {
 		return valoresMenu.get(groupPosition).getItemsGrupoMenu().size();
@@ -101,7 +102,8 @@ public class AdaptadorListaExpandible extends BaseExpandableListAdapter {
 		
 		return groupPosition;
 	}
-
+	
+	/** Retorna el número de elementos padre (grupos) **/
 	@Override
 	public int getGroupCount() {
 		return valoresMenu.size();
@@ -112,7 +114,8 @@ public class AdaptadorListaExpandible extends BaseExpandableListAdapter {
 		// TODO Auto-generated method stub
 		return groupPosition;
 	}
-
+	
+	/** Retorna la vista del elemento padre **/
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
 		
@@ -133,7 +136,8 @@ public class AdaptadorListaExpandible extends BaseExpandableListAdapter {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
+	/** Permite seleccionar los diferentes elementos hijos (retorna true) **/
 	@Override
 	public boolean isChildSelectable(int groupPosition, int childPosition) {		
 		return true;

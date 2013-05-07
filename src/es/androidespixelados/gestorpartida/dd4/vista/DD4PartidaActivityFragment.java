@@ -11,6 +11,8 @@ import es.androidespixelados.gestorpartida.R;
 import es.androidespixelados.gestorpartida.adaptador.AdaptadorListaExpandible;
 import es.androidespixelados.gestorpartida.controlador.ActividadFragmentoBase;
 import es.androidespixelados.gestorpartida.dd4.adaptador.MenuPrincipalDD4;
+import es.androidespixelados.gestorpartida.fragmento.FragmentoColumnaIzquierdaRoboGuice;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -53,7 +55,7 @@ public class DD4PartidaActivityFragment extends ActividadFragmentoBase implement
 		lblNombrePartida.setText("WaterDeep");
 		
 		/** listaGrupos contiene los valores del menú que formarán la ExpandableListView **/
-		List<MenuPrincipalDD4> listaValoresMenuDD4 = grupoMenuDD4.creacionGrupos();
+		List<MenuPrincipalDD4> listaValoresMenuDD4 = grupoMenuDD4.creacionGrupos();	
 		
 		/** Asigno el adaptador a la ExpandableListView **/
 		listaExpandible.setAdapter(new AdaptadorListaExpandible(this, listaValoresMenuDD4, R.layout.fila_de_grupo, 

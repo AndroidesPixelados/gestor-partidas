@@ -26,9 +26,7 @@ public class FragmentoColumnaIzquierdaRoboGuice extends FragmentoBase {
 	
 	@Override
 	public void onActivityCreated(Bundle state) {
-		super.onActivityCreated(state);
-		
-		//lstListado = (ListView)getView().findViewById(R.id.LstListado);		
+		super.onActivityCreated(state);	
 		
 	}
 

@@ -6,7 +6,7 @@
 	android:layout_height="match_parent">
 	
     <!-- Columna Izquierda -->
-	<fragment class="es.androidespixelados.gestorpartida.fragmento.FragmentoColumnaIzquierda"
+	<fragment class="es.androidespixelados.gestorpartida.fragmento.FragmentoColumnaIzquierdaRoboGuice"
 		android:id="@+id/FrgColIzq"
 		android:layout_weight="15"
 		android:layout_width="0px"
@@ -16,7 +16,7 @@
     <View style="@style/separador.vertical" />
 	
     <!-- Contenido -->
-	<fragment class="es.androidespixelados.gestorpartida.fragmento.FragmentoContenidoDerecho"
+	<fragment class="es.androidespixelados.gestorpartida.fragmento.FragmentoContenidoDerechoRoboGuice"
 		android:id="@+id/FrgContDer"
 		android:layout_weight="85"
 		android:layout_width="0px"

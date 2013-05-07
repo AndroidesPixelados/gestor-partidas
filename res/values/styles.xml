@@ -42,12 +42,21 @@
         <item name="android:background">@drawable/fondo_boton_inicio</item>
     </style>
     
-    <!-- Fragmento izquierdo -->
-    <style name="fragmentoIzquierdo">
+    <!-- Fragmento -->
+    <style name="fragmento">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
     </style>
+    
+    <!-- Fragmento contenido izquierdo -->
+    <style name="fragmento.listaExpandible">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    
+    <!-- Fragmento contenido derecho -->
+    
     
     <!-- Menú principal reglas DD4 -->
     

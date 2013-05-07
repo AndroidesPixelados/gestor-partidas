@@ -1,18 +1,20 @@
+/**
+ *
+ */
 package es.androidespixelados.gestorpartida.fragmento;
 
-import es.androidespixelados.gestorpartida.R;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import es.androidespixelados.gestorpartida.R;
+import es.androidespixelados.gestorpartida.controlador.FragmentoBase;
 
 /**
- * Fragmento del contenido
  * @author Javi Montes
  *
  */
-public class FragmentoContenidoDerecho extends Fragment {
+public class FragmentoContenidoDerechoRoboGuice extends FragmentoBase {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, 
