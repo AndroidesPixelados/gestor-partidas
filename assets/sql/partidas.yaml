@@ -1,0 +1,12 @@
+obtenerPartidasPorNombre:
+  select *
+  from partida
+  where
+    nombre like '%${nombre}%'
+obtenerTodasPartidas:
+  select *
+  from partida
+insertarPartida:
+  insert into partida (nombre,sistema_fk) values ('${nombre}','${sistema_fk}')
+insertarPartidaPrueba:
+  insert into partida (nombre,sistema_fk) values ('pepe', 0)    

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="errores_apertura_fichero">Error al abrir un fichero: %1$s</string>
+    <string name="errores_consulta_sql_no_existente">No ha sido definida la consulta a la que intenta acceder: %1$s</string>
+    <string name="errores_persistencia_clave_existente">La clave %1$s está duplicada en sus ficheros de consulta (fichero %2$s)</string>
 </resources>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="sql_partida_selectAll">SELECT id,nombre FROM partida</string>
-    <string name="sql_partida_select_por_nombre" formatted="false">SELECT id,nombre FROM partida WHERE nombre like \'%${nombre}%\'</string>
-    <string name="sql_partida_inserta_partida" formatted="false">insert into partida (nombre,sistema_fk) values (\'%${nombre}%\',\'%${sistema_fk}%\')</string>
-    <string name="sql_partida_inserta_partida_prueba" formatted="false">insert into partida (nombre,sistema_fk) values (\'pepe\', 0)</string>
-</resources>
