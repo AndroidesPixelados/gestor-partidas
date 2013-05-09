@@ -16,10 +16,17 @@
     <View style="@style/separador.vertical" />
 	
     <!-- Contenido -->
-	<fragment class="es.androidespixelados.gestorpartida.fragmento.FragmentoContenidoDerechoRoboGuice"
+	<!--  <fragment class="es.androidespixelados.gestorpartida.fragmento.FragmentoContenidoDerechoRoboGuice"
 		android:id="@+id/FrgContDer"
 		android:layout_weight="85"
 		android:layout_width="0px"
+		android:layout_height="match_parent" /> -->
+	
+	<LinearLayout
+    	android:id="@+id/contenedorFragmento"
+    	android:layout_weight="85"
+		android:layout_width="0px"
 		android:layout_height="match_parent" />
+	
 		
 </LinearLayout>

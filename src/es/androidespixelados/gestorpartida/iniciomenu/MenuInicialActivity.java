@@ -26,17 +26,15 @@ public class MenuInicialActivity extends ActividadBase {
 	@Inject
 	private PartidaNegocio	partidaNegocio;
 	
+	/**Botón Nueva Partida**/
 	@InjectView(R.id.botonNuevaPartida) private Button btnNuevaPartida;
+	/**Botón Cargar Partida**/
 	@InjectView(R.id.botonCargarPartida) private Button btnCargarPartida;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.menu_inicial_aplicacion);
-		
-		/**Botón Nueva Partida**/
-		//final Button btnNuevaPartida = (Button)findViewById(R.id.botonNuevaPartida);
-		
 		
 		/**
 		 * Evento click lleva al menú de elección de reglas

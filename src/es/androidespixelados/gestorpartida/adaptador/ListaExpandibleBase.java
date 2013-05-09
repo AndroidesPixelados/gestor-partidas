@@ -30,7 +30,7 @@ public class ListaExpandibleBase {
 	/** Nombre del menú padre (Grupo) **/
 	private String nombreGrupoMenu;
 	/** Lista de elementos que componen cada menú padre **/
-	private List<String> itemsGrupoMenu;
+	private List<SubItem> itemsGrupoMenu;
 	
 	/**
 	 * Obtiene el nombreGrupoMenu.
@@ -47,20 +47,24 @@ public class ListaExpandibleBase {
 	public void setNombreGrupoMenu(String nombreGrupoMenu) {
 		this.nombreGrupoMenu = nombreGrupoMenu;
 	}
+	
 	/**
 	 * Obtiene el itemsGrupoMenu.
 	 * @return itemsGrupoMenu.
 	 */
-	public List<String> getItemsGrupoMenu() {
+	public List<SubItem> getItemsGrupoMenu() {
 		return itemsGrupoMenu;
 	}
+	
 	/**
 	 * Establece el  itemsGrupoMenu
 	 * @param itemsGrupoMenu establece itemsGrupoMenu a itemsGrupoMenu
 	 * @return el objeto
 	 */
-	public void setItemsGrupoMenu(List<String> itemsGrupoMenu) {
+	public void setItemsGrupoMenu(List<SubItem> itemsGrupoMenu) {
 		this.itemsGrupoMenu = itemsGrupoMenu;
 	}
+	
+	
 
 }

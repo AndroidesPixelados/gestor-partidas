@@ -1,7 +1,6 @@
 package es.androidespixelados.gestorpartida.controlador;
 
 import es.androidespixelados.gestorpartida.R;
-import es.androidespixelados.gestorpartida.R.layout;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;

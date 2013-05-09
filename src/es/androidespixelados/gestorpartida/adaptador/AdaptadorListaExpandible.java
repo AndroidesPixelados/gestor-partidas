@@ -65,7 +65,7 @@ public class AdaptadorListaExpandible extends BaseExpandableListAdapter {
 	/** Retorna el nombre del elemento hijo **/
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {	
-		return valoresMenu.get(groupPosition).getItemsGrupoMenu().get(childPosition);
+		return valoresMenu.get(groupPosition).getItemsGrupoMenu().get(childPosition).getFragmento();
 	}
 
 	@Override
@@ -85,7 +85,7 @@ public class AdaptadorListaExpandible extends BaseExpandableListAdapter {
 		   }
 		    
 		   TextView nombreHijoMenu = (TextView) convertView.findViewById(idTextViewHijo);
-		   nombreHijoMenu.setText(valoresMenu.get(groupPosition).getItemsGrupoMenu().get(childPosition));
+		   nombreHijoMenu.setText(valoresMenu.get(groupPosition).getItemsGrupoMenu().get(childPosition).getNombre());
 		    
 		   return convertView;
 		

@@ -10,9 +10,9 @@ import com.google.inject.Inject;
 import es.androidespixelados.gestorpartida.R;
 import es.androidespixelados.gestorpartida.adaptador.AdaptadorListaExpandible;
 import es.androidespixelados.gestorpartida.controlador.ActividadFragmentoBase;
+import es.androidespixelados.gestorpartida.controlador.FragmentoBase;
 import es.androidespixelados.gestorpartida.dd4.adaptador.MenuPrincipalDD4;
-import es.androidespixelados.gestorpartida.fragmento.FragmentoColumnaIzquierdaRoboGuice;
-import android.app.Fragment;
+import es.androidespixelados.gestorpartida.fragmento.FragmentoPantallaPrincipalDD4;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -32,8 +32,8 @@ public class DD4PartidaActivityFragment extends ActividadFragmentoBase implement
 	@InjectView(R.id.listaExpandible) private ExpandableListView listaExpandible;
 	/** Obtengo el TextView donde se muestra el nombre de la partida **/
 	@InjectView(R.id.nombrePartida) private TextView lblNombrePartida;
-	/** Obtengo el TextView donde se muestra el contenido del fragment derecho **/
-	@InjectView(R.id.contenidoDerecho) private TextView contenidoDerecho;
+	//** Obtengo el TextView donde se muestra el contenido del fragment derecho **/
+	//@InjectView(R.id.contenidoDerecho) private TextView contenidoDerecho;
 	
 	@Inject /** Se inyecta una instancia de la clase MenuPrincipalDD4 para formar la ExpandableListView **/
 	private MenuPrincipalDD4 grupoMenuDD4;
@@ -45,6 +45,35 @@ public class DD4PartidaActivityFragment extends ActividadFragmentoBase implement
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.dd4_partida_main);
 		this.setTitle("Gestión de partida: WaterDeep");
+		
+		/** 
+		 * Comprueba que la actividad está utilizando el layout que incorpora el contenedor
+		 * de fragmentos
+		 */
+        if (findViewById(R.id.contenedorFragmento) != null) {
+
+        	/** 
+        	 * Si el usuario retrocede no se crea un nuevo nuevo fragmento, así
+        	 * se evita la superposición de éstos
+        	 */
+            if (savedInstanceState != null) {
+                return;
+            }
+
+            /** Creo una instancia del fragmento que se colocará por defecto **/
+        	//TO-DO Construir una pantalla de presentación adecuada
+            FragmentoPantallaPrincipalDD4 fragmentoPantallaPrincipalDD4 = new FragmentoPantallaPrincipalDD4();
+            
+            // In case this activity was started with special instructions from an Intent,
+            // pass the Intent's extras to the fragment as arguments
+            //firstFragment.setArguments(getIntent().getExtras());
+            
+            /**
+             * El fragmento inicial es añadido al contenedor
+             */
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.contenedorFragmento, fragmentoPantallaPrincipalDD4).commit();
+        }
 		
 		/** Listener necesario para cerrar automáticamente todos los menús de la lista expandible salvo el actual **/
 		listaExpandible.setOnGroupExpandListener(this);	
@@ -66,12 +95,18 @@ public class DD4PartidaActivityFragment extends ActividadFragmentoBase implement
 			
 			@Override
 			public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+							
+				android.support.v4.app.FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 				
-				/** Obtiene el nombre de la opción seleccionada **/
-				String opcionSeleccionada = (String)parent.getExpandableListAdapter().getChild(groupPosition, childPosition);
+				FragmentoBase fragmento = (FragmentoBase)parent.getExpandableListAdapter().getChild(groupPosition, childPosition);
 				
-				/** Coloca el nombre de la opción seleccionada en el fragmento derecho **/
-				contenidoDerecho.setText(opcionSeleccionada);
+				// Replace whatever is in the fragment_container view with this fragment,
+				// and add the transaction to the back stack so the user can navigate back
+				transaction.replace(R.id.contenedorFragmento, fragmento);
+				transaction.addToBackStack(null);
+
+				// Commit the transaction
+				transaction.commit();
 				
 				return false;
 			}
