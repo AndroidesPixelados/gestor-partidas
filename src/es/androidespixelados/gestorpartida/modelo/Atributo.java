@@ -1,6 +1,5 @@
 package es.androidespixelados.gestorpartida.modelo;
 
-
 /**
  * Un atributo para un personaje.
  * 
@@ -16,7 +15,7 @@ public class Atributo extends ModeloBase {
 	/**
 	 * El valor del atributo;
 	 */
-	private Object			valor;
+	private String			valor;
 
 	/**
 	 * Obtiene el tipo.
@@ -42,7 +41,7 @@ public class Atributo extends ModeloBase {
 	 * 
 	 * @return valor
 	 */
-	public Object getValor() {
+	public String getValor() {
 		return valor;
 	}
 
@@ -52,8 +51,26 @@ public class Atributo extends ModeloBase {
 	 * @param valor
 	 *            el valor a establecer
 	 */
-	public void setValor(Object valor) {
+	public void setValor(String valor) {
 		this.valor = valor;
+	}
+
+	/**
+	 * Obtiene el valor del atributo como un entero.
+	 * 
+	 * @return
+	 */
+	public Integer getValorComoEntero() {
+		return Integer.parseInt(this.valor);
+	}
+
+	/**
+	 * Obtiene el valor del atributo como un número real.
+	 * 
+	 * @return
+	 */
+	public Float getValorComoReal() {
+		return Float.parseFloat(valor);
 	}
 
 }

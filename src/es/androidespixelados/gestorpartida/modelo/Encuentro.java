@@ -11,27 +11,33 @@ import java.util.List;
  * combate o chequeos de habilidad.
  * 
  * @author Javi Montes
- *
+ * 
  */
-public class Encuentro extends ModeloBase{
-	
+public class Encuentro extends ModeloBase {
+
 	/**
 	 * Lista de tramas
 	 */
-	private List<Trama> tramas;
-	
+	private List<Trama>				tramas;
+
 	/**
 	 * Lista de imágenes
 	 */
-	private List<Imagen> imagenes;
-	
+	private List<RecursoMultimedia>	imagenes;
+
 	/**
 	 * Lista de canciones (ambiente)
 	 */
-	private List<Sonido> musica;
+	private List<RecursoMultimedia>	musica;
+
+	/**
+	 * El listado de personajes que participan en el encuentro.
+	 */
+	private List<Personaje>			personajes;
 
 	/**
 	 * Obtiene el tramas.
+	 * 
 	 * @return tramas.
 	 */
 	public List<Trama> getTramas() {
@@ -39,8 +45,10 @@ public class Encuentro extends ModeloBase{
 	}
 
 	/**
-	 * Establece el  tramas
-	 * @param tramas establece tramas a tramas
+	 * Establece el tramas
+	 * 
+	 * @param tramas
+	 *            establece tramas a tramas
 	 * @return el objeto
 	 */
 	public void setTramas(List<Trama> tramas) {
@@ -49,36 +57,62 @@ public class Encuentro extends ModeloBase{
 
 	/**
 	 * Obtiene el imagenes.
+	 * 
 	 * @return imagenes.
 	 */
-	public List<Imagen> getImagenes() {
+	public List<RecursoMultimedia> getImagenes() {
 		return imagenes;
 	}
 
 	/**
-	 * Establece el  imagenes
-	 * @param imagenes establece imagenes a imagenes
+	 * Establece el imagenes
+	 * 
+	 * @param imagenes
+	 *            establece imagenes a imagenes
 	 * @return el objeto
 	 */
-	public void setImagenes(List<Imagen> imagenes) {
+	public void setImagenes(List<RecursoMultimedia> imagenes) {
 		this.imagenes = imagenes;
 	}
 
 	/**
 	 * Obtiene el musica.
+	 * 
 	 * @return musica.
 	 */
-	public List<Sonido> getMusica() {
+	public List<RecursoMultimedia> getMusica() {
 		return musica;
 	}
 
 	/**
-	 * Establece el  musica
-	 * @param musica establece musica a musica
+	 * Establece el musica
+	 * 
+	 * @param musica
+	 *            establece musica a musica
 	 * @return el objeto
 	 */
-	public void setMusica(List<Sonido> musica) {
+	public void setMusica(List<RecursoMultimedia> musica) {
 		this.musica = musica;
+	}
+
+	/**
+	 * Obtiene el personajes.
+	 * 
+	 * @return personajes.
+	 */
+	public List<Personaje> getPersonajes() {
+		return personajes;
+	}
+
+	/**
+	 * Establece el personajes
+	 * 
+	 * @param personajes
+	 *            establece personajes a personajes
+	 * @return el objeto
+	 */
+	public void setPersonajes(List<Personaje> personajes) {
+		this.personajes = personajes;
 	}
 
 }

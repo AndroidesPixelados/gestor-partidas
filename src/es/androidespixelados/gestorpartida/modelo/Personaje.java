@@ -14,7 +14,7 @@ import java.util.Map;
 public class Personaje extends ModeloBase {
 
 	/**
-	 * El listado de atributos. La clave del mapa es el nombre del atributo.
+	 * El listado de atributos. La clave del mapa es el nombre del tipo de atributo.
 	 */
 	private Map<String, Atributo>	atributos;
 
@@ -27,12 +27,12 @@ public class Personaje extends ModeloBase {
 	/**
 	 * Una lista de imágenes asociadas al personaje.
 	 */
-	private List<Imagen>			imagenes;
-	
+	private List<RecursoMultimedia>	imagenes;
+
 	/**
 	 * Lista de efectos sufridos en combate
 	 */
-	private List<EfectoCombate>	efectosSufridosEnCombate;
+	private List<EfectoCombate>		efectosSufridosEnCombate;
 
 	/**
 	 * Obtiene el tramas.
@@ -56,19 +56,20 @@ public class Personaje extends ModeloBase {
 	/**
 	 * Obtiene el imagenes.
 	 * 
-	 * @return imagenes
+	 * @return imagenes.
 	 */
-	public List<Imagen> getImagenes() {
+	public List<RecursoMultimedia> getImagenes() {
 		return imagenes;
 	}
 
 	/**
-	 * Establece el valor de imagenes al valor de imagenes.
+	 * Establece el imagenes
 	 * 
 	 * @param imagenes
-	 *            el valor a establecer
+	 *            establece imagenes a imagenes
+	 * @return el objeto
 	 */
-	public void setImagenes(List<Imagen> imagenes) {
+	public void setImagenes(List<RecursoMultimedia> imagenes) {
 		this.imagenes = imagenes;
 	}
 
@@ -92,6 +93,59 @@ public class Personaje extends ModeloBase {
 	}
 
 	/**
+	 * Obtiene el valor de un atributo, identificado por el nombre
+	 * del tipo de atributo.
+	 * 
+	 * @param nombreAtributo
+	 *            el nombre del tipo de atributo
+	 * @return
+	 */
+	public Object getAtributo(EnumeracionTipoAtributo nombreTipoAtributo) {
+		return this.getAtributo(nombreTipoAtributo.getNombre());
+	}
+
+	/**
+	 * Obtiene el valor de un atributo, identificado por el nombre
+	 * del tipo de atributo.
+	 * 
+	 * @param nombreAtributo
+	 *            el nombre del tipo de atributo
+	 * @return
+	 */
+	public Object getAtributo(String nombreTipoAtributo) {
+		Object resultado = null;
+		Atributo atributo = atributos.get(nombreTipoAtributo);
+		if (atributo != null) {
+			resultado = atributo.getValor();
+		}
+		return resultado;
+	}
+
+	/**
+	 * Obtiene el valor de un atributo, convertido al tipo de datos especificado.
+	 * 
+	 * @param nombreTipoAtributo
+	 * @param tipoTipoAtributo
+	 * @return
+	 */
+	public <T> T getAtributo(String nombreTipoAtributo, Class<T> tipoTipoAtributo) {
+		Object valorAtributo = getAtributo(nombreTipoAtributo);
+
+		return tipoTipoAtributo.cast(valorAtributo);
+	}
+
+	/**
+	 * Obtiene el valor de un atributo, convertido al tipo de datos especificado.
+	 * 
+	 * @param nombreTipoAtributo
+	 * @param tipoTipoAtributo
+	 * @return
+	 */
+	public <T> T getAtributo(EnumeracionTipoAtributo nombreTipoAtributo, Class<T> tipoTipoAtributo) {
+		return getAtributo(nombreTipoAtributo.getNombre(), tipoTipoAtributo);
+	}
+
+	/**
 	 * Obtiene el efectosSufridosEnCombate.
 	 * 
 	 * @return efectosSufridosEnCombate.
@@ -101,12 +155,13 @@ public class Personaje extends ModeloBase {
 	}
 
 	/**
-	 * Establece el  efectosSufridosEnCombate
+	 * Establece el efectosSufridosEnCombate
+	 * 
 	 * @param efectosSufridosEnCombate
 	 * @return el objeto
 	 */
 	public void setEfectosSufridosEnCombate(List<EfectoCombate> efectosSufridosEnCombate) {
 		this.efectosSufridosEnCombate = efectosSufridosEnCombate;
 	}
-	
+
 }

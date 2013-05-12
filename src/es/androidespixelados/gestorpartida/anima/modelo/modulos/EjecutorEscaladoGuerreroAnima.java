@@ -29,7 +29,7 @@ public class EjecutorEscaladoGuerreroAnima implements EjecutorEscaladoPersonaje 
 		Integer nivel = (Integer) parametros.get(PARAMETRO_NIVEL).getValor();
 		Integer dificultad = (Integer) parametros.get(PARAMETRO_DIFICULTAD).getValor();
 
-		atributos.get(ATRIBUTO_FUERZA).setValor(nivel * MULTIPLICADOR_FUERZA * dificultad);
+		atributos.get(ATRIBUTO_FUERZA).setValor("" + (nivel * MULTIPLICADOR_FUERZA * dificultad));
 	}
 
 }

@@ -28,6 +28,11 @@ public class TipoAtributo extends ModeloBase {
 	private Sistema		sistema;
 
 	/**
+	 * La descripción del tipo de atributo.
+	 */
+	private String		descripcion;
+
+	/**
 	 * Obtiene el semantico.
 	 * 
 	 * @return semantico
@@ -83,6 +88,26 @@ public class TipoAtributo extends ModeloBase {
 	 */
 	public void setSistema(Sistema sistema) {
 		this.sistema = sistema;
+	}
+
+	/**
+	 * Obtiene el descripcion.
+	 * 
+	 * @return descripcion.
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	/**
+	 * Establece el descripcion
+	 * 
+	 * @param descripcion
+	 *            establece descripcion a descripcion
+	 * @return el objeto
+	 */
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 
 }

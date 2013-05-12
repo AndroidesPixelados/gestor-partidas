@@ -10,12 +10,18 @@ package es.androidespixelados.gestorpartida.modelo;
  * 
  */
 public class EfectoCombate extends ModeloBase {
-	
+
 	/** Icono asociado **/
-	private Imagen icono;
+	private Imagen	icono;
+
+	/**
+	 * La descripción del efecto.
+	 */
+	private String	descripcion;
 
 	/**
 	 * Obtiene el icono.
+	 * 
 	 * @return icono.
 	 */
 	public Imagen getIcono() {
@@ -23,14 +29,34 @@ public class EfectoCombate extends ModeloBase {
 	}
 
 	/**
-	 * Establece el  icono
-	 * @param icono establece icono a icono
+	 * Establece el icono
+	 * 
+	 * @param icono
+	 *            establece icono a icono
 	 * @return el objeto
 	 */
 	public void setIcono(Imagen icono) {
 		this.icono = icono;
 	}
-	
-	
+
+	/**
+	 * Obtiene el descripcion.
+	 * 
+	 * @return descripcion.
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	/**
+	 * Establece el descripcion
+	 * 
+	 * @param descripcion
+	 *            establece descripcion a descripcion
+	 * @return el objeto
+	 */
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
 }

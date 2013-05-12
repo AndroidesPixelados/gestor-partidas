@@ -1,0 +1,28 @@
+obtenerAtributosPorPersonaje:
+  select 
+    tipo_atributo_fk,
+    valor valorAtributo
+  from atributo_por_personaje
+  where 
+    personaje_fk = ${idPersonaje}
+obtenerTiposAtributosPorSistema:
+  select 
+    id,
+    nombre,
+    descripcion,
+    tipo_semantico,
+    tipo_sintactico
+  from tipo_atributo
+  where
+    sistema_fk = ${idSistema}
+obtenerTipoAtributoPorId:
+  select
+    id,
+    nombre,
+    descripcion,
+    tipo_semantico,
+    tipo_sintactico,
+    sistema_fk
+  from tipo_atributo
+  where
+    id = ${idTipoAtributo}

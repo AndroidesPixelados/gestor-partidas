@@ -18,13 +18,13 @@ public class PartidaDungeons extends Partida {
 	/**
 	 * Lista de escenas
 	 */
-	private List<Escena> listaEscenas;
+	private List<EscenaDungeons> listaEscenas;
 
 	/**
 	 * Obtiene el listaEscenas.
 	 * @return listaEscenas.
 	 */
-	public List<Escena> getListaEscenas() {
+	public List<EscenaDungeons> getListaEscenas() {
 		return listaEscenas;
 	}
 
@@ -33,7 +33,7 @@ public class PartidaDungeons extends Partida {
 	 * @param listaEscenas establece listaEscenas a listaEscenas
 	 * @return el objeto
 	 */
-	public void setListaEscenas(List<Escena> listaEscenas) {
+	public void setListaEscenas(List<EscenaDungeons> listaEscenas) {
 		this.listaEscenas = listaEscenas;
 	}
 	

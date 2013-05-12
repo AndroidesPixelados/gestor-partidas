@@ -1,0 +1,7 @@
+obtenerPersonajePorId:
+  select
+    id,
+    nombre,
+    es_jugador
+  where
+    id = ${idPersonaje}
