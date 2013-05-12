@@ -68,25 +68,7 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		try {
-			List<String> instruccionesSQLCreacion = obtenerSQLCreacion();
-			List<String> instruccionesSQLDatosPrueba = obtenerSQLDatosPruebas();
-			instruccionesSQLCreacion.addAll(instruccionesSQLDatosPrueba);
-
-			db.beginTransaction();
-			try {
-				for (String instruccion : instruccionesSQLCreacion) {
-					db.execSQL(instruccion);
-				}
-				db.setTransactionSuccessful();
-			} finally {
-				db.endTransaction();
-			}
-
-		} catch (IOException ioe) {
-			Log.e(this.getClass().toString(), getString(R.string.errores_apertura_fichero, ioe.getMessage()));
-		}
-
+		this.cargarBaseDeDatos(db);
 	}
 
 	/**
@@ -160,6 +142,16 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int arg1, int arg2) {
+		this.cargarBaseDeDatos(db);
+	}
+
+	/**
+	 * Método de carga del DDL de la base de datos.
+	 * 
+	 * @param db
+	 *            la conexión SQLite a la base de datos.
+	 */
+	private void cargarBaseDeDatos(SQLiteDatabase db) {
 		try {
 			List<String> instruccionesSQLCreacion = obtenerSQLCreacion();
 			List<String> instruccionesSQLDatosPrueba = obtenerSQLDatosPruebas();
