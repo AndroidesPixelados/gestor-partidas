@@ -1,74 +1,121 @@
-drop table if exists sistema;
-create table sistema (
-	id integer not null 
-		constraint sistema_pk primary key autoincrement, 
-	nombre varchar(255) not null
-		constraint sistema_nombre_uq unique
-);
-drop table if exists partida;
-create table partida (
-	id integer not null
-		constraint partida_pk primary key autoincrement, 
-	nombre varchar(255) not null
-		constraint partida_nombre_uq unique,
-	sistema_fk integer not null
-		constraint partida_sistema_fk references sistema (id)
-			on delete cascade
-			on update cascade
-);
-drop table if exists etiqueta;
-create table etiqueta (
-	id integer not null
-		constraint etiqueta_pk primary key autoincrement,
-	nombre varchar(255) not null unique
-);
-drop table if exists personaje;
-create table personaje (
-	id integer not null
-		constraint personaje_pk primary key autoincrement,
-	nombre varchar(255) not null unique,
-	partida_fk integer not null
-		constraint personaje_partida_fk references partida (id)
-			on delete cascade
-			on update cascade
-		
-);
-drop table if exists tipo_atributo;
-create table tipo_atributo (
-	id integer not null
-		constraint tipo_atributo_pk primary key autoincrement,
-	nombre varchar(255) not null unique,
-	tipo_semantico varchar(255) not null,
-	tipo_sintactico integer not null
-);
-drop table if exists atributo;
-create table atributo (
-	id integer not null
-		constraint atributo_pk primary key autoincrement,
-	nombre varchar(255) not null unique,
-	valor varchar(255),
-	tipo_atributo_fk integer not null
-		constraint atributo_tipo_atributo_fk references tipo_atributo(id)
-			on delete cascade
-			on update cascade,
-	personaje_fk integer not null
-		constraint atributo_personaje_fk references personaje(id)
-			on delete cascade
-			on update cascade
-);
-drop table if exists recurso;
-create table recurso (
-	id integer not null
-		constraint recurso_pk primary key autoincrement,
-	nombre varchar(255),
-	ruta varchar(255) not null,
-	contexto integer not null
-);
-drop table if exists trama;
-create table trama (
-	id integer not null
-		constraint trama_pk primary key autoincrement,
-	nombre varchar(255),
-	texto text not null,
-	contexto integer not null
-);
+ALTER TABLE tipo_atributo DROP CONSTRAINT;
+
+DROP INDEX sqlite_autoindex_trama_por_encuentro_1;
+
+DROP INDEX sqlite_autoindex_monstruo_por_encuentro_dungeons_1;
+
+DROP INDEX sqlite_autoindex_sonido_por_encuentro_1;
+
+DROP INDEX sqlite_autoindex_resistencia_por_monstruo_1;
+
+DROP INDEX sqlite_autoindex_escena_por_partida_1;
+
+DROP INDEX sqlite_autoindex_imagen_por_personaje_1;
+
+DROP INDEX sqlite_autoindex_habilidad_por_personaje_no_jugador_1;
+
+DROP INDEX sqlite_autoindex_trama_por_escena_1;
+
+DROP INDEX sqlite_autoindex_personaje_dungeons_por_escena_1;
+
+DROP INDEX sqlite_autoindex_imagen_por_encuentro_1;
+
+DROP INDEX sqlite_autoindex_encuentro_dungeons_por_escena_1;
+
+DROP INDEX sqlite_autoindex_clase_personaje_por_personaje_jugador_1;
+
+DROP INDEX sqlite_autoindex_imagen_por_escena_1;
+
+DROP INDEX sqlite_autoindex_tipo_atributo_por_sistema_1;
+
+DROP INDEX sqlite_autoindex_trama_por_personaje_1;
+
+DROP INDEX sqlite_autoindex_efecto_combate_por_personaje_1;
+
+DROP INDEX sqlite_autoindex_inmunidad_por_monstruo_1;
+
+DROP TABLE etiqueta;
+
+DROP TABLE habilidad;
+
+DROP TABLE imagen;
+
+DROP TABLE monstruo;
+
+DROP TABLE escena;
+
+DROP TABLE personaje_dungeons_por_escena;
+
+DROP TABLE resistencia_por_monstruo;
+
+DROP TABLE personaje;
+
+DROP TABLE efecto_combate_por_personaje;
+
+DROP TABLE raza;
+
+DROP TABLE monstruo_por_encuentro_dungeons;
+
+DROP TABLE partida;
+
+DROP TABLE trama_por_personaje;
+
+DROP TABLE resistencia;
+
+DROP TABLE encuentro_dungeons_por_escena;
+
+DROP TABLE sistema;
+
+DROP TABLE atributo;
+
+DROP TABLE imagen_por_encuentro;
+
+DROP TABLE personaje_jugador;
+
+DROP TABLE sonido_por_encuentro;
+
+DROP TABLE imagen_por_personaje;
+
+DROP TABLE inmunidad_por_monstruo;
+
+DROP TABLE escena_por_partida;
+
+DROP TABLE clase_personaje_por_personaje_jugador;
+
+DROP TABLE encuentro;
+
+DROP TABLE inmunidad;
+
+DROP TABLE rol;
+
+DROP TABLE tipo_atributo_por_sistema;
+
+DROP TABLE trama_por_escena;
+
+DROP TABLE tipo_dato;
+
+DROP TABLE efecto_combate;
+
+DROP TABLE habilidad_por_personaje_no_jugador;
+
+DROP TABLE tipo_atributo;
+
+DROP TABLE trama;
+
+DROP TABLE clase_personaje;
+
+DROP TABLE personaje_dungeons;
+
+DROP TABLE encuentro_dungeons;
+
+DROP TABLE personaje_no_jugador;
+
+DROP TABLE trama_por_encuentro;
+
+DROP TABLE imagen_por_escena;
+
+DROP TABLE sqlite_sequence;
+
+DROP TABLE sonido;
+
+DROP TABLE recurso;

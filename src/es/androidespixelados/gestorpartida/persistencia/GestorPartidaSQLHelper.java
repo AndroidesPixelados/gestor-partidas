@@ -41,7 +41,7 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 	/**
 	 * El nombre del fichero DDL de la base de datos de la aplicación.
 	 */
-	private static final String			FICHERO_CREACION		= "creacion.sql";
+	private static final String			FICHERO_CREACION		= "modelo.sql";
 
 	/**
 	 * El nombre del fichero con los datos de prueba de la aplicación.
@@ -145,7 +145,10 @@ public class GestorPartidaSQLHelper extends SQLiteOpenHelper {
 
 		String linea = br.readLine();
 		while (linea != null) {
-			sb.append(linea);
+			// Descartamos las líneas de comentarios
+			if (!linea.startsWith("--")) {
+				sb.append(linea);
+			}
 			linea = br.readLine();
 		}
 
