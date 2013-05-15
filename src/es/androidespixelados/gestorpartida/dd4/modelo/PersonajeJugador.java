@@ -1,7 +1,5 @@
 package es.androidespixelados.gestorpartida.dd4.modelo;
 
-import java.util.List;
-
 import es.androidespixelados.gestorpartida.persistencia.EnumUtil;
 
 /**
@@ -13,11 +11,6 @@ import es.androidespixelados.gestorpartida.persistencia.EnumUtil;
 public class PersonajeJugador extends PersonajeDungeons {
 
 	/**
-	 * Clase de personaje
-	 */
-	private List<ClasePersonaje>	clases;
-
-	/**
 	 * Obtiene la raza del personaje.
 	 * 
 	 * @return raza.
@@ -26,26 +19,6 @@ public class PersonajeJugador extends PersonajeDungeons {
 		Integer raza = this.getAtributo(AtributosGeneralesDungeons.RAZA, Integer.class);
 
 		return EnumUtil.convertirValorPersistenteAEnumeracion(RazaDungeons.class, raza);
-	}
-
-	/**
-	 * Obtiene el clases.
-	 * 
-	 * @return clases.
-	 */
-	public List<ClasePersonaje> getClases() {
-		return clases;
-	}
-
-	/**
-	 * Establece el clases
-	 * 
-	 * @param clases
-	 *            establece clases a clases
-	 * @return el objeto
-	 */
-	public void setClases(List<ClasePersonaje> clases) {
-		this.clases = clases;
 	}
 
 }

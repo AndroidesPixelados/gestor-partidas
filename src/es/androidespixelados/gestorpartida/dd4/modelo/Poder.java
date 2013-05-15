@@ -13,6 +13,11 @@ import es.androidespixelados.gestorpartida.modelo.ModeloBase;
  */
 public class Poder extends ModeloBase {
 
+	boolean bloodied;
+	int valorRecarga;
+	enum frecuenciaUso;
+	int turnoActivacion;
+	
 	/**
 	 * La descripción del poder
 	 */
