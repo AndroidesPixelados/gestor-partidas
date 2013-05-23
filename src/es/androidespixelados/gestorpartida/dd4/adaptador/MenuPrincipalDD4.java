@@ -6,6 +6,8 @@ package es.androidespixelados.gestorpartida.dd4.adaptador;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.os.Bundle;
+
 import es.androidespixelados.gestorpartida.adaptador.ListaExpandibleBase;
 import es.androidespixelados.gestorpartida.adaptador.SubItem;
 import es.androidespixelados.gestorpartida.fragmento.FragmentoClases;
@@ -38,8 +40,8 @@ public class MenuPrincipalDD4 extends ListaExpandibleBase {
 		/** Creación de los cinco grupos de menú **/
 		MenuPrincipalDD4 plantillas = new MenuPrincipalDD4();
 		plantillas.setNombreGrupoMenu("Plantillas");
-//		MenuPrincipalDD4 personajes = new MenuPrincipalDD4();
-//		personajes.setNombreGrupoMenu("Personajes");
+		MenuPrincipalDD4 personajes = new MenuPrincipalDD4();
+		personajes.setNombreGrupoMenu("Personajes");
 //		MenuPrincipalDD4 escenas = new MenuPrincipalDD4();
 //		escenas.setNombreGrupoMenu("Escenas");
 //		MenuPrincipalDD4 utilidades = new MenuPrincipalDD4();
@@ -49,7 +51,7 @@ public class MenuPrincipalDD4 extends ListaExpandibleBase {
 		
 		/** Se añaden los cinco grupos a la lista**/
 		grupos.add(plantillas);
-//		grupos.add(personajes);
+		grupos.add(personajes);
 //		grupos.add(escenas);
 //		grupos.add(utilidades);
 //		grupos.add(libreriaGeneral);
@@ -57,7 +59,7 @@ public class MenuPrincipalDD4 extends ListaExpandibleBase {
 		/** Items Plantillas **/
 		List<SubItem> plantillasItems = new ArrayList<SubItem>();
 		
-		/** Platillas - Personajes **/
+		/** Plantillas - Personajes **/
 		SubItem personajesItem = new SubItem();
 		personajesItem.setNombre("Personajes");
 		FragmentoPersonajes fragmentoPersonajes = new FragmentoPersonajes();
@@ -79,6 +81,27 @@ public class MenuPrincipalDD4 extends ListaExpandibleBase {
 		plantillasItems.add(personajesItem);
 		plantillasItems.add(clasesItem);
 		plantillasItems.add(encuentrosItem);
+		
+		List<SubItem> personajesItems = new ArrayList<SubItem>();
+		
+		SubItem personajeJugador = new SubItem();
+		personajeJugador.setNombre("Personaje Jugador");
+		FragmentoPersonajes fragmentoPersonajeJugador = new FragmentoPersonajes();
+		Bundle parametroJugador = new Bundle();
+	    parametroJugador.putString("jugador", "jugador");
+	    fragmentoPersonajeJugador.setArguments(parametroJugador);
+	    personajeJugador.setFragmento(fragmentoPersonajeJugador);
+	    
+	    SubItem personajeNoJugador = new SubItem();
+		personajeNoJugador.setNombre("Personaje No Jugador");
+		FragmentoPersonajes fragmentoPersonajeNoJugador = new FragmentoPersonajes();
+		Bundle parametroNoJugador = new Bundle();
+	    parametroNoJugador.putString("jugador", "no-jugador");
+	    fragmentoPersonajeNoJugador.setArguments(parametroNoJugador);
+	    personajeNoJugador.setFragmento(fragmentoPersonajeNoJugador);
+	    
+	    personajesItems.add(personajeJugador);
+	    personajesItems.add(personajeNoJugador);
 		
 //		/** Items Personajes **/
 //		List<String> personajesItems = new ArrayList<String>();
@@ -104,7 +127,7 @@ public class MenuPrincipalDD4 extends ListaExpandibleBase {
 		
 		/** Se añaden los items a cada grupo **/
 		grupos.get(0).setItemsGrupoMenu(plantillasItems);
-//		grupos.get(1).setItemsGrupoMenu(personajesItems);
+		grupos.get(1).setItemsGrupoMenu(personajesItems);
 //		grupos.get(2).setItemsGrupoMenu(escenasItems);
 //		grupos.get(3).setItemsGrupoMenu(utilidadesItems);
 //		grupos.get(4).setItemsGrupoMenu(libreriaGeneralItems);

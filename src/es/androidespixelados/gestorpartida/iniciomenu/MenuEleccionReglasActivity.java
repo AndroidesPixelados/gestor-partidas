@@ -14,6 +14,7 @@ import es.androidespixelados.gestorpartida.anima.controlador.AnimaPartidaActivit
 import es.androidespixelados.gestorpartida.controlador.ActividadBase;
 import es.androidespixelados.gestorpartida.dd4.negocio.PartidaNegocio;
 import es.androidespixelados.gestorpartida.dd4.vista.DD4PartidaActivityFragment;
+import es.androidespixelados.gestorpartida.dd4.vista.DD4PartidaDrawerActivity;
 
 /**
  * Actividad para el men� de elección de reglas
@@ -61,7 +62,7 @@ public class MenuEleccionReglasActivity extends ActividadBase {
 			@Override
 			public void onClick(View v) {
 
-				Intent intent = new Intent(MenuEleccionReglasActivity.this, DD4PartidaActivityFragment.class);
+				Intent intent = new Intent(MenuEleccionReglasActivity.this, DD4PartidaDrawerActivity.class);
 				
 				/**
 				 * Recoge el nombre de la partida y lo graba en la base de datos

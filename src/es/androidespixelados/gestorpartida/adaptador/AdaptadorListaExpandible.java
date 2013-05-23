@@ -3,6 +3,8 @@ package es.androidespixelados.gestorpartida.adaptador;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,6 +68,7 @@ public class AdaptadorListaExpandible extends BaseExpandableListAdapter {
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {	
 		return valoresMenu.get(groupPosition).getItemsGrupoMenu().get(childPosition).getFragmento();
+		
 	}
 
 	@Override
@@ -100,7 +103,7 @@ public class AdaptadorListaExpandible extends BaseExpandableListAdapter {
 	@Override
 	public Object getGroup(int groupPosition) {
 		
-		return groupPosition;
+		return valoresMenu.get(groupPosition);
 	}
 	
 	/** Retorna el número de elementos padre (grupos) **/
@@ -123,6 +126,15 @@ public class AdaptadorListaExpandible extends BaseExpandableListAdapter {
 			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = inflater.inflate(idVistaGrupoPadre, null);
 		}
+		
+		/**
+		 * Colorea de rojo el nombre del grupo cuando está expandido
+		 */
+		if(isExpanded){
+	        convertView.setBackgroundColor(Color.RED);
+	    } else {
+	    	convertView.setBackgroundColor(Color.TRANSPARENT);
+	    }
 		
 		TextView nombreGrupoMenu = (TextView) convertView.findViewById(idTextViewPadre);
 		nombreGrupoMenu.setText(valoresMenu.get(groupPosition).getNombreGrupoMenu());

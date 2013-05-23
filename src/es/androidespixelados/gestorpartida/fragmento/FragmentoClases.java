@@ -21,7 +21,7 @@ public class FragmentoClases extends FragmentoBase {
 			                 ViewGroup container, 
 			                 Bundle savedInstanceState) {
 		
-		return inflater.inflate(R.layout.fragmento_clases, container, false);
+		return inflater.inflate(R.layout.dd4_fragmento_clases, container, false);
 	}
 	
 	@Override

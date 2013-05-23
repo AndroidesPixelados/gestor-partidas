@@ -22,8 +22,10 @@
 		android:layout_width="0px"
 		android:layout_height="match_parent" /> -->
 	
+	 
 	<LinearLayout
     	android:id="@+id/contenedorFragmento"
+    	android:orientation="horizontal"
     	android:layout_weight="85"
 		android:layout_width="0px"
 		android:layout_height="match_parent" />

@@ -87,8 +87,8 @@ public class DD4PartidaActivityFragment extends ActividadFragmentoBase implement
 		List<MenuPrincipalDD4> listaValoresMenuDD4 = grupoMenuDD4.creacionGrupos();	
 		
 		/** Asigno el adaptador a la ExpandableListView **/
-		listaExpandible.setAdapter(new AdaptadorListaExpandible(this, listaValoresMenuDD4, R.layout.fila_de_grupo, 
-				R.layout.fila_de_hijo_grupo, R.id.nombreGrupoMenuDD4, R.id.nombreHijoMenuDD4));
+		listaExpandible.setAdapter(new AdaptadorListaExpandible(this, listaValoresMenuDD4, R.layout.dd4_menu_principal_lista_expandible_fila_de_grupo, 
+				R.layout.dd4_menu_principal_lista_expandible_fila_de_hijo_grupo, R.id.nombreGrupoMenuDD4, R.id.nombreHijoMenuDD4));
 		
 		/** Listener sobre los diferentes botones de la ExpandableListView **/
 		listaExpandible.setOnChildClickListener(new OnChildClickListener() {
@@ -100,8 +100,13 @@ public class DD4PartidaActivityFragment extends ActividadFragmentoBase implement
 				
 				FragmentoBase fragmento = (FragmentoBase)parent.getExpandableListAdapter().getChild(groupPosition, childPosition);
 				
+//				if(fragmento.getArguments() != null) {
+//					fragmento.setArguments(fragmento.getArguments());
+//				}
+				
 				// Replace whatever is in the fragment_container view with this fragment,
 				// and add the transaction to the back stack so the user can navigate back
+				
 				transaction.replace(R.id.contenedorFragmento, fragmento);
 				transaction.addToBackStack(null);
 
@@ -129,8 +134,8 @@ public class DD4PartidaActivityFragment extends ActividadFragmentoBase implement
 	 * (int)
 	 */
 	public void onGroupExpand(int groupPosition) {
-	    AdaptadorListaExpandible expListAdapter = new AdaptadorListaExpandible(this, grupoMenuDD4.creacionGrupos(), R.layout.fila_de_grupo, 
-	    		R.layout.fila_de_hijo_grupo, R.id.nombreGrupoMenuDD4, R.id.nombreHijoMenuDD4);
+	    AdaptadorListaExpandible expListAdapter = new AdaptadorListaExpandible(this, grupoMenuDD4.creacionGrupos(), R.layout.dd4_menu_principal_lista_expandible_fila_de_grupo, 
+	    		R.layout.dd4_menu_principal_lista_expandible_fila_de_hijo_grupo, R.id.nombreGrupoMenuDD4, R.id.nombreHijoMenuDD4);
 		int len = expListAdapter.getGroupCount();
 
 	    for (int i = 0; i < len; i++) {

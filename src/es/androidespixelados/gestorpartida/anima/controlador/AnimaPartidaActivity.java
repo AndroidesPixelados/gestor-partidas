@@ -41,9 +41,9 @@ public class AnimaPartidaActivity extends ActividadBase {
 		lblNombrePartida.setText("Vientos de LOL");
 
 		// Prueba de inyección de dao
-		List<Sistema> sistemas = sistemaDAO.getSistemasPorNombre("i");
-		for (Sistema sistema : sistemas) {
-			Log.i("datos", "Sistema encontrado: " + sistema.getNombre());
-		}
+//		List<Sistema> sistemas = sistemaDAO.getSistemasPorNombre("i");
+//		for (Sistema sistema : sistemas) {
+//			Log.i("datos", "Sistema encontrado: " + sistema.getNombre());
+//		}
 	}
 }
