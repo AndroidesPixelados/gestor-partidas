@@ -10,7 +10,6 @@ import es.androidespixelados.gestorpartida.persistencia.EnumUtil;
  */
 public class PersonajeJugador extends PersonajeDungeons {
 
-
 	/**
 	 * Obtiene la raza del personaje.
 	 * 
@@ -21,6 +20,5 @@ public class PersonajeJugador extends PersonajeDungeons {
 
 		return EnumUtil.convertirValorPersistenteAEnumeracion(RazaDungeons.class, raza);
 	}
-
 
 }
