@@ -43,7 +43,7 @@ public class DD4PartidaActivityFragment extends ActividadFragmentoBase implement
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
-		this.setContentView(R.layout.dd4_partida_main);
+		this.setContentView(R.layout.obsoleto_dd4_partida_main);
 		this.setTitle("Gestión de partida: WaterDeep");
 		
 		/** 
